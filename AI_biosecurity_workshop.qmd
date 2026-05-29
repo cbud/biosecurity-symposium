@@ -10,6 +10,7 @@ execute:
   echo: true
   warning: false
   message: false
+  freeze: auto
 
 format:
   html:
@@ -46,6 +47,30 @@ invisible(lapply(required_packages, library, character.only = TRUE))
 ```
 
 # Introduction
+
+
+::: {.callout-important}
+### Download Workshop Materials
+
+All files needed for the Biosecurity Symposium workshop (University of Hawaii, 14-19 June 2026) are available here:
+
+👉 https://github.com/cbud/biosecurity-symposium/archive/refs/heads/main.zip
+
+Download and unzip the file, then open the project in RStudio.
+:::
+
+### Required files
+
+This workshop uses:
+
+- `corpus/` (text data)
+- `functions/` (helper functions)
+- `prompts/` (prompt templates)
+- `AI biosecurity workshop generalized.R` (main script)
+
+All are included in the download. You can generate your own API key (not free) at: \
+<https://openai.com/api>. One can be provided during the workshop.
+
 
 ## LLM‑based extraction of biosecurity information
 

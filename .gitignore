@@ -1,0 +1,21 @@
+
+# API folder (sensitive)
+Biosecurity workshop api/*
+!Biosecurity workshop api/.gitkeep
+
+# Outputs
+outputs/
+
+# R project
+.Rproj.user/
+*.Rhistory
+*.RData
+
+# Quarto build extras
+docs/site_libs/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+

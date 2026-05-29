@@ -1,0 +1,23 @@
+project:
+  type: website
+  output-dir: docs
+
+
+exclude:
+  - "Biosecurity workshop api/**"
+
+website:
+  title: "R Pipeline"
+  navbar:
+    left:
+      - text: "Home"
+        href: AI_biosecurity_workshop.qmd
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+
+
+execute:
+  echo: true

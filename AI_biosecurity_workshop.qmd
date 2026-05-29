@@ -77,6 +77,7 @@ All are included in the download. You can generate your own API key (not free) a
 This document presents a generalised LLM pipeline for extracting structured information from bibliographic datasets. It supports scalable literature review and risk assessment workflows and was applied in rapid hazard ranking of invasive plant species [@buddenhagenValidatingRapidAlgorithmic2025].
 
 The model uses three variables:
+
 - scientific publication counts  
 - climate suitability  
 - species distribution  
@@ -88,6 +89,7 @@ to rank potential invasive taxa.
 Evidence shows that an organism’s invasion history (i.e., weediness elsewhere) generally outperforms biological traits (or attributes) as a predictor of risk. This is partly because selecting consistent trait-based variables is difficult across organism groups, and such data are often incomplete or unavailable.
 
 The model estimates hazard by combining:
+
 1. climatic suitability (C) in the receiving region  
 2. the number of weed-related scientific publications (P), derived using LLMs as a proxy for impact and concern  
 3. global occurrence counts (G), reflecting ecological generalism and spread potential  

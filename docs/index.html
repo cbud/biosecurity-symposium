@@ -4039,15 +4039,25 @@ vertical-align: -.125em;
 <section id="llmbased-extraction-of-biosecurity-information" class="level2">
 <h2 class="anchored" data-anchor-id="llmbased-extraction-of-biosecurity-information">LLM‑based extraction of biosecurity information</h2>
 <p>This document presents a generalised LLM pipeline for extracting structured information from bibliographic datasets. It supports scalable literature review and risk assessment workflows and was applied in rapid hazard ranking of invasive plant species <span class="citation" data-cites="buddenhagenValidatingRapidAlgorithmic2025">(<a href="#ref-buddenhagenValidatingRapidAlgorithmic2025" role="doc-biblioref">Buddenhagen et al., 2025</a>)</span>.</p>
-<p>The model uses three variables: - scientific publication counts<br>
-- climate suitability<br>
-- species distribution</p>
+<p>The model uses three variables:</p>
+<ul>
+<li>scientific publication counts<br>
+</li>
+<li>climate suitability<br>
+</li>
+<li>species distribution</li>
+</ul>
 <p>to rank potential invasive taxa.</p>
 <p><span class="citation" data-cites="buddenhagenValidatingRapidAlgorithmic2025">Buddenhagen et al. (<a href="#ref-buddenhagenValidatingRapidAlgorithmic2025" role="doc-biblioref">2025</a>)</span> introduced a rapid, algorithmic weed hazard ranking model (CPG) that uses widely available data. It leverages two well-supported predictors of weediness: weediness elsewhere and climate suitability <span class="citation" data-cites="caleyApplicationEvaluationClassification2006 hulmeWeedRiskAssessment2012 weberAnalysisAssessmentOutcomes2009 randallCanPlantsCultural2016">(<a href="#ref-caleyApplicationEvaluationClassification2006" role="doc-biblioref">Caley and Kuhnert, 2006</a>; <a href="#ref-hulmeWeedRiskAssessment2012" role="doc-biblioref">Hulme, 2012</a>; <a href="#ref-randallCanPlantsCultural2016" role="doc-biblioref">Randall, 2016</a>; <a href="#ref-weberAnalysisAssessmentOutcomes2009" role="doc-biblioref">Weber, Dane Panetta, Virtue and Pheloung, 2009</a>)</span>.</p>
 <p>Evidence shows that an organism’s invasion history (i.e., weediness elsewhere) generally outperforms biological traits (or attributes) as a predictor of risk. This is partly because selecting consistent trait-based variables is difficult across organism groups, and such data are often incomplete or unavailable.</p>
-<p>The model estimates hazard by combining: 1. climatic suitability (C) in the receiving region<br>
-2. the number of weed-related scientific publications (P), derived using LLMs as a proxy for impact and concern<br>
-3. global occurrence counts (G), reflecting ecological generalism and spread potential</p>
+<p>The model estimates hazard by combining:</p>
+<ol type="1">
+<li>climatic suitability (C) in the receiving region<br>
+</li>
+<li>the number of weed-related scientific publications (P), derived using LLMs as a proxy for impact and concern<br>
+</li>
+<li>global occurrence counts (G), reflecting ecological generalism and spread potential</li>
+</ol>
 <p>High-scoring species can then be prioritised for more detailed risk assessments to evaluate potential harms, affected stakeholders, management feasibility, costs, and benefits.</p>
 <section id="steps" class="level3">
 <h3 class="anchored" data-anchor-id="steps">Steps</h3>
@@ -4271,8 +4281,8 @@ vertical-align: -.125em;
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>          used (Mb) gc trigger  (Mb) max used  (Mb)
-Ncells 1473735 78.8    2524375 134.9  2524375 134.9
-Vcells 2688066 20.6    8388608  64.0  3791176  29.0</code></pre>
+Ncells 1473734 78.8    2524375 134.9  2524375 134.9
+Vcells 2688029 20.6    8388608  64.0  3791194  29.0</code></pre>
 </div>
 <details class="code-fold">
 <summary>Code</summary>
@@ -4288,8 +4298,8 @@ Vcells 2688066 20.6    8388608  64.0  3791176  29.0</code></pre>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>          used (Mb) gc trigger  (Mb) max used  (Mb)
-Ncells 1475730 78.9    2524375 134.9  2524375 134.9
-Vcells 2697474 20.6    8388608  64.0  3791176  29.0</code></pre>
+Ncells 1475729 78.9    2524375 134.9  2524375 134.9
+Vcells 2697437 20.6    8388608  64.0  3791194  29.0</code></pre>
 </div>
 <details class="code-fold">
 <summary>Code</summary>
@@ -4301,7 +4311,7 @@ Vcells 2697474 20.6    8388608  64.0  3791176  29.0</code></pre>
 <span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="fu">toc</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>137.97 sec elapsed</code></pre>
+<pre><code>142.28 sec elapsed</code></pre>
 </div>
 <details class="code-fold">
 <summary>Code</summary>
@@ -4320,8 +4330,8 @@ Vcells 2697474 20.6    8388608  64.0  3791176  29.0</code></pre>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>          used (Mb) gc trigger  (Mb) max used  (Mb)
-Ncells 1478500 79.0    2524375 134.9  2524375 134.9
-Vcells 2701901 20.7    8388608  64.0  3791176  29.0</code></pre>
+Ncells 1478499 79.0    2524375 134.9  2524375 134.9
+Vcells 2701888 20.7    8388608  64.0  3791194  29.0</code></pre>
 </div>
 <details class="code-fold">
 <summary>Code</summary>
@@ -4395,7 +4405,7 @@ Vcells 2701901 20.7    8388608  64.0  3791176  29.0</code></pre>
 <span id="cb10-68"><a href="#cb10-68" aria-hidden="true" tabindex="-1"></a><span class="fu">toc</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>99.39 sec elapsed</code></pre>
+<pre><code>114.56 sec elapsed</code></pre>
 </div>
 </div>
 <p>After you run the ai recovery the data is stored for each chunk in separate folders for each topic and needs to be combined into a master file that stores the topic outputs described in the prompt and the original data. This code should work no matter how many prompt topics you are running. The script here takes about 5 minutes. An example script is also here: “AI biosecurity workshop generalized.R”.</p>
@@ -4534,7 +4544,7 @@ Vcells 2701901 20.7    8388608  64.0  3791176  29.0</code></pre>
 <span id="cb13-82"><a href="#cb13-82" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<p>In these abstracts there were 98 articles regarded as relevant. There were 182 unique names in the parsed name list before using the backbone taxonomy and 157 accepted species names after standardisation to the backbone taxonomy and restricting to species level.</p>
+<p>In these abstracts there were 98 articles regarded as relevant. There were 185 unique names in the parsed name list before using the backbone taxonomy and 156 accepted species names after standardisation to the backbone taxonomy and restricting to species level.</p>
 </section>
 <section id="table-of-articles-per-species" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="table-of-articles-per-species">Table of articles per species</h2>
@@ -4565,20 +4575,20 @@ Vcells 2701901 20.7    8388608  64.0  3791176  29.0</code></pre>
 <figure class="quarto-float quarto-float-tbl figure page-columns page-full">
 <div aria-describedby="tbl-unique-article-ids-per-species-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="lvjheetito" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#lvjheetito table {
+<div id="hsqjnipubq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#hsqjnipubq table {
 font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 -webkit-font-smoothing: antialiased;
 -moz-osx-font-smoothing: grayscale;
 }
-#lvjheetito thead, #lvjheetito tbody, #lvjheetito tfoot, #lvjheetito tr, #lvjheetito td, #lvjheetito th {
+#hsqjnipubq thead, #hsqjnipubq tbody, #hsqjnipubq tfoot, #hsqjnipubq tr, #hsqjnipubq td, #hsqjnipubq th {
 border-style: none;
 }
-#lvjheetito p {
+#hsqjnipubq p {
 margin: 0;
 padding: 0;
 }
-#lvjheetito .gt_table {
+#hsqjnipubq .gt_table {
 display: table;
 border-collapse: collapse;
 line-height: normal;
@@ -4603,11 +4613,11 @@ border-left-style: none;
 border-left-width: 2px;
 border-left-color: #D3D3D3;
 }
-#lvjheetito .gt_caption {
+#hsqjnipubq .gt_caption {
 padding-top: 4px;
 padding-bottom: 4px;
 }
-#lvjheetito .gt_title {
+#hsqjnipubq .gt_title {
 color: #333333;
 font-size: 125%;
 font-weight: initial;
@@ -4618,7 +4628,7 @@ padding-right: 5px;
 border-bottom-color: #FFFFFF;
 border-bottom-width: 0;
 }
-#lvjheetito .gt_subtitle {
+#hsqjnipubq .gt_subtitle {
 color: #333333;
 font-size: 85%;
 font-weight: initial;
@@ -4629,7 +4639,7 @@ padding-right: 5px;
 border-top-color: #FFFFFF;
 border-top-width: 0;
 }
-#lvjheetito .gt_heading {
+#hsqjnipubq .gt_heading {
 background-color: #FFFFFF;
 text-align: center;
 border-bottom-color: #FFFFFF;
@@ -4640,12 +4650,12 @@ border-right-style: none;
 border-right-width: 1px;
 border-right-color: #D3D3D3;
 }
-#lvjheetito .gt_bottom_border {
+#hsqjnipubq .gt_bottom_border {
 border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#lvjheetito .gt_col_headings {
+#hsqjnipubq .gt_col_headings {
 border-top-style: solid;
 border-top-width: 2px;
 border-top-color: #D3D3D3;
@@ -4659,7 +4669,7 @@ border-right-style: none;
 border-right-width: 1px;
 border-right-color: #D3D3D3;
 }
-#lvjheetito .gt_col_heading {
+#hsqjnipubq .gt_col_heading {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -4678,7 +4688,7 @@ padding-left: 5px;
 padding-right: 5px;
 overflow-x: hidden;
 }
-#lvjheetito .gt_column_spanner_outer {
+#hsqjnipubq .gt_column_spanner_outer {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -4689,13 +4699,13 @@ padding-bottom: 0;
 padding-left: 4px;
 padding-right: 4px;
 }
-#lvjheetito .gt_column_spanner_outer:first-child {
+#hsqjnipubq .gt_column_spanner_outer:first-child {
 padding-left: 0;
 }
-#lvjheetito .gt_column_spanner_outer:last-child {
+#hsqjnipubq .gt_column_spanner_outer:last-child {
 padding-right: 0;
 }
-#lvjheetito .gt_column_spanner {
+#hsqjnipubq .gt_column_spanner {
 border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
@@ -4706,10 +4716,10 @@ overflow-x: hidden;
 display: inline-block;
 width: 100%;
 }
-#lvjheetito .gt_spanner_row {
+#hsqjnipubq .gt_spanner_row {
 border-bottom-style: hidden;
 }
-#lvjheetito .gt_group_heading {
+#hsqjnipubq .gt_group_heading {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -4734,7 +4744,7 @@ border-right-color: #D3D3D3;
 vertical-align: middle;
 text-align: left;
 }
-#lvjheetito .gt_empty_group_heading {
+#hsqjnipubq .gt_empty_group_heading {
 padding: 0.5px;
 color: #333333;
 background-color: #FFFFFF;
@@ -4748,13 +4758,13 @@ border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 vertical-align: middle;
 }
-#lvjheetito .gt_from_md > :first-child {
+#hsqjnipubq .gt_from_md > :first-child {
 margin-top: 0;
 }
-#lvjheetito .gt_from_md > :last-child {
+#hsqjnipubq .gt_from_md > :last-child {
 margin-bottom: 0;
 }
-#lvjheetito .gt_row {
+#hsqjnipubq .gt_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -4772,7 +4782,7 @@ border-right-color: #D3D3D3;
 vertical-align: middle;
 overflow-x: hidden;
 }
-#lvjheetito .gt_stub {
+#hsqjnipubq .gt_stub {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -4784,7 +4794,7 @@ border-right-color: #D3D3D3;
 padding-left: 5px;
 padding-right: 5px;
 }
-#lvjheetito .gt_stub_row_group {
+#hsqjnipubq .gt_stub_row_group {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -4797,13 +4807,13 @@ padding-left: 5px;
 padding-right: 5px;
 vertical-align: top;
 }
-#lvjheetito .gt_row_group_first td {
+#hsqjnipubq .gt_row_group_first td {
 border-top-width: 2px;
 }
-#lvjheetito .gt_row_group_first th {
+#hsqjnipubq .gt_row_group_first th {
 border-top-width: 2px;
 }
-#lvjheetito .gt_summary_row {
+#hsqjnipubq .gt_summary_row {
 color: #333333;
 background-color: #FFFFFF;
 text-transform: inherit;
@@ -4812,14 +4822,14 @@ padding-bottom: 8px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#lvjheetito .gt_first_summary_row {
+#hsqjnipubq .gt_first_summary_row {
 border-top-style: solid;
 border-top-color: #D3D3D3;
 }
-#lvjheetito .gt_first_summary_row.thick {
+#hsqjnipubq .gt_first_summary_row.thick {
 border-top-width: 2px;
 }
-#lvjheetito .gt_last_summary_row {
+#hsqjnipubq .gt_last_summary_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -4828,7 +4838,7 @@ border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#lvjheetito .gt_grand_summary_row {
+#hsqjnipubq .gt_grand_summary_row {
 color: #333333;
 background-color: #FFFFFF;
 text-transform: inherit;
@@ -4837,7 +4847,7 @@ padding-bottom: 8px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#lvjheetito .gt_first_grand_summary_row {
+#hsqjnipubq .gt_first_grand_summary_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -4846,7 +4856,7 @@ border-top-style: double;
 border-top-width: 6px;
 border-top-color: #D3D3D3;
 }
-#lvjheetito .gt_last_grand_summary_row_top {
+#hsqjnipubq .gt_last_grand_summary_row_top {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -4855,10 +4865,10 @@ border-bottom-style: double;
 border-bottom-width: 6px;
 border-bottom-color: #D3D3D3;
 }
-#lvjheetito .gt_striped {
+#hsqjnipubq .gt_striped {
 background-color: rgba(128, 128, 128, 0.05);
 }
-#lvjheetito .gt_table_body {
+#hsqjnipubq .gt_table_body {
 border-top-style: solid;
 border-top-width: 2px;
 border-top-color: #D3D3D3;
@@ -4866,7 +4876,7 @@ border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#lvjheetito .gt_footnotes {
+#hsqjnipubq .gt_footnotes {
 color: #333333;
 background-color: #FFFFFF;
 border-bottom-style: none;
@@ -4879,7 +4889,7 @@ border-right-style: none;
 border-right-width: 2px;
 border-right-color: #D3D3D3;
 }
-#lvjheetito .gt_footnote {
+#hsqjnipubq .gt_footnote {
 margin: 0px;
 font-size: 90%;
 padding-top: 4px;
@@ -4887,7 +4897,7 @@ padding-bottom: 4px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#lvjheetito .gt_sourcenotes {
+#hsqjnipubq .gt_sourcenotes {
 color: #333333;
 background-color: #FFFFFF;
 border-bottom-style: none;
@@ -4900,64 +4910,64 @@ border-right-style: none;
 border-right-width: 2px;
 border-right-color: #D3D3D3;
 }
-#lvjheetito .gt_sourcenote {
+#hsqjnipubq .gt_sourcenote {
 font-size: 90%;
 padding-top: 4px;
 padding-bottom: 4px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#lvjheetito .gt_left {
+#hsqjnipubq .gt_left {
 text-align: left;
 }
-#lvjheetito .gt_center {
+#hsqjnipubq .gt_center {
 text-align: center;
 }
-#lvjheetito .gt_right {
+#hsqjnipubq .gt_right {
 text-align: right;
 font-variant-numeric: tabular-nums;
 }
-#lvjheetito .gt_font_normal {
+#hsqjnipubq .gt_font_normal {
 font-weight: normal;
 }
-#lvjheetito .gt_font_bold {
+#hsqjnipubq .gt_font_bold {
 font-weight: bold;
 }
-#lvjheetito .gt_font_italic {
+#hsqjnipubq .gt_font_italic {
 font-style: italic;
 }
-#lvjheetito .gt_super {
+#hsqjnipubq .gt_super {
 font-size: 65%;
 }
-#lvjheetito .gt_footnote_marks {
+#hsqjnipubq .gt_footnote_marks {
 font-size: 75%;
 vertical-align: 0.4em;
 position: initial;
 }
-#lvjheetito .gt_asterisk {
+#hsqjnipubq .gt_asterisk {
 font-size: 100%;
 vertical-align: 0;
 }
-#lvjheetito .gt_indent_1 {
+#hsqjnipubq .gt_indent_1 {
 text-indent: 5px;
 }
-#lvjheetito .gt_indent_2 {
+#hsqjnipubq .gt_indent_2 {
 text-indent: 10px;
 }
-#lvjheetito .gt_indent_3 {
+#hsqjnipubq .gt_indent_3 {
 text-indent: 15px;
 }
-#lvjheetito .gt_indent_4 {
+#hsqjnipubq .gt_indent_4 {
 text-indent: 20px;
 }
-#lvjheetito .gt_indent_5 {
+#hsqjnipubq .gt_indent_5 {
 text-indent: 25px;
 }
-#lvjheetito .katex-display {
+#hsqjnipubq .katex-display {
 display: inline-flex !important;
 margin-bottom: 0.75em !important;
 }
-#lvjheetito div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#hsqjnipubq div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
 height: 0px !important;
 }
 </style>
@@ -5015,9 +5025,19 @@ height: 0px !important;
 <td class="gt_row gt_left" headers="names_used">Bromus tectorum</td>
 </tr>
 <tr class="odd">
+<td class="gt_row gt_left" headers="species_gbif">Echinochloa colonum</td>
+<td class="gt_row gt_right" headers="publication_count">3</td>
+<td class="gt_row gt_left" headers="names_used">Echinochloa colona</td>
+</tr>
+<tr class="even">
 <td class="gt_row gt_left" headers="species_gbif">Eleusine indica</td>
 <td class="gt_row gt_right" headers="publication_count">3</td>
 <td class="gt_row gt_left" headers="names_used">Eleusine indica</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="species_gbif">Lolium multiflorum</td>
+<td class="gt_row gt_right" headers="publication_count">3</td>
+<td class="gt_row gt_left" headers="names_used">Lolium multiflorum</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="species_gbif">Sorghum halepense</td>
@@ -5025,59 +5045,59 @@ height: 0px !important;
 <td class="gt_row gt_left" headers="names_used">Sorghum halepense</td>
 </tr>
 <tr class="odd">
+<td class="gt_row gt_left" headers="species_gbif">Taraxacum officinale</td>
+<td class="gt_row gt_right" headers="publication_count">3</td>
+<td class="gt_row gt_left" headers="names_used">Taraxacum officinale</td>
+</tr>
+<tr class="even">
 <td class="gt_row gt_left" headers="species_gbif">Ailanthus altissima</td>
 <td class="gt_row gt_right" headers="publication_count">2</td>
 <td class="gt_row gt_left" headers="names_used">Ailanthus altissima</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td class="gt_row gt_left" headers="species_gbif">Bromus diandrus</td>
 <td class="gt_row gt_right" headers="publication_count">2</td>
 <td class="gt_row gt_left" headers="names_used">Bromus diandrus</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td class="gt_row gt_left" headers="species_gbif">Bromus inermis</td>
 <td class="gt_row gt_right" headers="publication_count">2</td>
 <td class="gt_row gt_left" headers="names_used">Bromus inermis</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td class="gt_row gt_left" headers="species_gbif">Buxus sempervirens</td>
 <td class="gt_row gt_right" headers="publication_count">2</td>
 <td class="gt_row gt_left" headers="names_used">Buxus sempervirens</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td class="gt_row gt_left" headers="species_gbif">Calamagrostis arenaria</td>
 <td class="gt_row gt_right" headers="publication_count">2</td>
 <td class="gt_row gt_left" headers="names_used">Ammophila arenaria</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td class="gt_row gt_left" headers="species_gbif">Cenchrus ciliaris</td>
 <td class="gt_row gt_right" headers="publication_count">2</td>
 <td class="gt_row gt_left" headers="names_used">Cenchrus ciliaris</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td class="gt_row gt_left" headers="species_gbif">Chondrilla juncea</td>
 <td class="gt_row gt_right" headers="publication_count">2</td>
 <td class="gt_row gt_left" headers="names_used">Chondrilla juncea</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td class="gt_row gt_left" headers="species_gbif">Commelina benghalensis</td>
 <td class="gt_row gt_right" headers="publication_count">2</td>
-<td class="gt_row gt_left" headers="names_used">Commelina benghalensis</td>
+<td class="gt_row gt_left" headers="names_used">Commelina benghalensis; Commenlina benghalensis</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td class="gt_row gt_left" headers="species_gbif">Cyperus iria</td>
 <td class="gt_row gt_right" headers="publication_count">2</td>
 <td class="gt_row gt_left" headers="names_used">Cyperus iria</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td class="gt_row gt_left" headers="species_gbif">Cyperus rotundus</td>
 <td class="gt_row gt_right" headers="publication_count">2</td>
 <td class="gt_row gt_left" headers="names_used">Cyperus rotundus</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="species_gbif">Echinochloa colonum</td>
-<td class="gt_row gt_right" headers="publication_count">2</td>
-<td class="gt_row gt_left" headers="names_used">Echinochloa colona; Echinochloa colonum</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="species_gbif">Elymus repens</td>
@@ -5095,39 +5115,39 @@ height: 0px !important;
 <td class="gt_row gt_left" headers="names_used">Euphorbia heterophylla</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_left" headers="species_gbif">Lolium multiflorum</td>
-<td class="gt_row gt_right" headers="publication_count">2</td>
-<td class="gt_row gt_left" headers="names_used">Lolium multiflorum</td>
-</tr>
-<tr class="even">
 <td class="gt_row gt_left" headers="species_gbif">Melaleuca quinquenervia</td>
 <td class="gt_row gt_right" headers="publication_count">2</td>
 <td class="gt_row gt_left" headers="names_used">Melaleuca quinquenervia</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td class="gt_row gt_left" headers="species_gbif">Orobanche ramosa</td>
 <td class="gt_row gt_right" headers="publication_count">2</td>
 <td class="gt_row gt_left" headers="names_used">Orobanche ramosa</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td class="gt_row gt_left" headers="species_gbif">Oryza sativa</td>
 <td class="gt_row gt_right" headers="publication_count">2</td>
 <td class="gt_row gt_left" headers="names_used">Oryza sativa</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td class="gt_row gt_left" headers="species_gbif">Phelipanche ramosa</td>
 <td class="gt_row gt_right" headers="publication_count">2</td>
 <td class="gt_row gt_left" headers="names_used">Phelipanche ramosa</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td class="gt_row gt_left" headers="species_gbif">Pontederia crassipes</td>
 <td class="gt_row gt_right" headers="publication_count">2</td>
 <td class="gt_row gt_left" headers="names_used">Eichhornia crassipes</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td class="gt_row gt_left" headers="species_gbif">Portulaca oleracea</td>
 <td class="gt_row gt_right" headers="publication_count">2</td>
 <td class="gt_row gt_left" headers="names_used">Portulaca oleracea</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="species_gbif">Senna obtusifolia</td>
+<td class="gt_row gt_right" headers="publication_count">2</td>
+<td class="gt_row gt_left" headers="names_used">Senna obtusifolia</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="species_gbif">Solanum nigrum</td>
@@ -5135,24 +5155,14 @@ height: 0px !important;
 <td class="gt_row gt_left" headers="names_used">Solanum nigrum</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_left" headers="species_gbif">Taraxacum officinale</td>
-<td class="gt_row gt_right" headers="publication_count">2</td>
-<td class="gt_row gt_left" headers="names_used">Taraxacum officinale</td>
-</tr>
-<tr class="even">
 <td class="gt_row gt_left" headers="species_gbif">Abutilon theophrasti</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Abutilon theophrasti</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td class="gt_row gt_left" headers="species_gbif">Aegilops triuncialis</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Aegilops triuncialis</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="species_gbif">Agropyron cristatum</td>
-<td class="gt_row gt_right" headers="publication_count">1</td>
-<td class="gt_row gt_left" headers="names_used">Agropyron cristatum</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="species_gbif">Alopecurus myosuroides</td>
@@ -5325,24 +5335,34 @@ height: 0px !important;
 <td class="gt_row gt_left" headers="names_used">Mariscus alternifolius</td>
 </tr>
 <tr class="odd">
+<td class="gt_row gt_left" headers="species_gbif">Cyperus esculentus</td>
+<td class="gt_row gt_right" headers="publication_count">1</td>
+<td class="gt_row gt_left" headers="names_used">Cyperus esculentus</td>
+</tr>
+<tr class="even">
 <td class="gt_row gt_left" headers="species_gbif">Cytisus scoparius</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Cytisus scoparius</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td class="gt_row gt_left" headers="species_gbif">Digera muricata</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Digera arvensis</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td class="gt_row gt_left" headers="species_gbif">Digitaria insularis</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Digitaria insularis</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td class="gt_row gt_left" headers="species_gbif">Echinochloa glabrescens</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Echinochloa glabrescens</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="species_gbif">Echinochloa oryzoides</td>
+<td class="gt_row gt_right" headers="publication_count">1</td>
+<td class="gt_row gt_left" headers="names_used">Echinochloa crus-galli ssp. hispidula</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="species_gbif">Elaeagnus angustifolia</td>
@@ -5405,44 +5425,44 @@ height: 0px !important;
 <td class="gt_row gt_left" headers="names_used">Hibiscus trionum</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_left" headers="species_gbif">Hordeum jubatum</td>
-<td class="gt_row gt_right" headers="publication_count">1</td>
-<td class="gt_row gt_left" headers="names_used">Hordeum jubatum subsp. intermedium</td>
-</tr>
-<tr class="even">
 <td class="gt_row gt_left" headers="species_gbif">Hordeum murinum</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Hordeum glaucum; Hordeum leporinum</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td class="gt_row gt_left" headers="species_gbif">Hordeum spontaneum</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Hordeum spontaneum</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td class="gt_row gt_left" headers="species_gbif">Hydrilla verticillata</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Hydrilla verticillata</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td class="gt_row gt_left" headers="species_gbif">Hydrocharis laevigata</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Hydrocharis laevigata</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td class="gt_row gt_left" headers="species_gbif">Ilex aquifolium</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Ilex aquifolium</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td class="gt_row gt_left" headers="species_gbif">Iris pseudacorus</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Iris pseudacorus</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td class="gt_row gt_left" headers="species_gbif">Lactuca sativa</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Lactuca sativa</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="species_gbif">Laurus nobilis</td>
+<td class="gt_row gt_right" headers="publication_count">1</td>
+<td class="gt_row gt_left" headers="names_used">Laurus nobilis</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="species_gbif">Lepidium sativum</td>
@@ -5545,94 +5565,84 @@ height: 0px !important;
 <td class="gt_row gt_left" headers="names_used">Phalaris arundinacea</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_left" headers="species_gbif">Phalaris canariensis</td>
-<td class="gt_row gt_right" headers="publication_count">1</td>
-<td class="gt_row gt_left" headers="names_used">Phalaris canariensis</td>
-</tr>
-<tr class="even">
 <td class="gt_row gt_left" headers="species_gbif">Phleum pratense</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Phleum pratense</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td class="gt_row gt_left" headers="species_gbif">Phragmites australis</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Phragmites australis</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td class="gt_row gt_left" headers="species_gbif">Polygonum aviculare</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Polygonum aviculare</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td class="gt_row gt_left" headers="species_gbif">Pontederia vaginalis</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Monochoria vaginalis</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td class="gt_row gt_left" headers="species_gbif">Potentilla recta</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Potentilla recta</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td class="gt_row gt_left" headers="species_gbif">Praxelis clematidea</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Praxelis clematidea</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td class="gt_row gt_left" headers="species_gbif">Prunus laurocerasus</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Prunus laurocerasus</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td class="gt_row gt_left" headers="species_gbif">Pteridium aquilinum</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Pteridium aquilinum</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td class="gt_row gt_left" headers="species_gbif">Rosa multiflora</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Rosa multiflora</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td class="gt_row gt_left" headers="species_gbif">Rumex conglomeratus</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Rumex conglomeratus</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td class="gt_row gt_left" headers="species_gbif">Rumex crispus</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Rumex crispus</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td class="gt_row gt_left" headers="species_gbif">Rumex obtusifolius</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Rumex obtusifolius</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td class="gt_row gt_left" headers="species_gbif">Saccharum ravennae</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Saccharum ravennae</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td class="gt_row gt_left" headers="species_gbif">Saccharum spontaneum</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Saccharum spontaneum</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td class="gt_row gt_left" headers="species_gbif">Salsola tragus</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Salsola tragus</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td class="gt_row gt_left" headers="species_gbif">Senecio vulgaris</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Senecio vulgaris</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="species_gbif">Senna obtusifolia</td>
-<td class="gt_row gt_right" headers="publication_count">1</td>
-<td class="gt_row gt_left" headers="names_used">Senna obtusifolia</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="species_gbif">Setaria glauca</td>
@@ -5700,56 +5710,51 @@ height: 0px !important;
 <td class="gt_row gt_left" headers="names_used">Taraxacum japonicum</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="species_gbif">Taraxacum officinarum</td>
-<td class="gt_row gt_right" headers="publication_count">1</td>
-<td class="gt_row gt_left" headers="names_used">Taraxacum officiinarum</td>
-</tr>
-<tr class="odd">
 <td class="gt_row gt_left" headers="species_gbif">Taraxacum platycarpum</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Taraxacum platycarpum</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td class="gt_row gt_left" headers="species_gbif">Thuja plicata</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Thuja plicata</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td class="gt_row gt_left" headers="species_gbif">Tridax procumbens</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Tridax procumbens</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td class="gt_row gt_left" headers="species_gbif">Urochloa eminii</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Urochloa decumbens</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td class="gt_row gt_left" headers="species_gbif">Urochloa platyphylla</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Urochloa platyphylla</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td class="gt_row gt_left" headers="species_gbif">Urochloa reptans</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Brachiaria reptans</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td class="gt_row gt_left" headers="species_gbif">Ventenata dubia</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Ventenata dubia</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td class="gt_row gt_left" headers="species_gbif">Vernicia fordii</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Aleurites fordii</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td class="gt_row gt_left" headers="species_gbif">Vicia sativa</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Vicia sativa</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td class="gt_row gt_left" headers="species_gbif">Xanthium strumarium</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Xanthium strumarium</td>
@@ -6322,534 +6327,536 @@ Weber, J., Dane Panetta, F., Virtue, J. and Pheloung, P. (2009). An analysis of 
 <span id="cb15-77"><a href="#cb15-77" aria-hidden="true" tabindex="-1"></a>This document presents a generalised LLM pipeline for extracting structured information from bibliographic datasets. It supports scalable literature review and risk assessment workflows and was applied in rapid hazard ranking of invasive plant species <span class="co">[</span><span class="ot">@buddenhagenValidatingRapidAlgorithmic2025</span><span class="co">]</span>.</span>
 <span id="cb15-78"><a href="#cb15-78" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-79"><a href="#cb15-79" aria-hidden="true" tabindex="-1"></a>The model uses three variables:</span>
-<span id="cb15-80"><a href="#cb15-80" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>scientific publication counts  </span>
-<span id="cb15-81"><a href="#cb15-81" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>climate suitability  </span>
-<span id="cb15-82"><a href="#cb15-82" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>species distribution  </span>
-<span id="cb15-83"><a href="#cb15-83" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-84"><a href="#cb15-84" aria-hidden="true" tabindex="-1"></a>to rank potential invasive taxa.</span>
-<span id="cb15-85"><a href="#cb15-85" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-86"><a href="#cb15-86" aria-hidden="true" tabindex="-1"></a>@buddenhagenValidatingRapidAlgorithmic2025 introduced a rapid, algorithmic weed hazard ranking model (CPG) that uses widely available data. It leverages two well-supported predictors of weediness: weediness elsewhere and climate suitability <span class="co">[</span><span class="ot">@caleyApplicationEvaluationClassification2006; @hulmeWeedRiskAssessment2012; @weberAnalysisAssessmentOutcomes2009; @randallCanPlantsCultural2016</span><span class="co">]</span>.</span>
-<span id="cb15-87"><a href="#cb15-87" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-88"><a href="#cb15-88" aria-hidden="true" tabindex="-1"></a>Evidence shows that an organism’s invasion history (i.e., weediness elsewhere) generally outperforms biological traits (or attributes) as a predictor of risk. This is partly because selecting consistent trait-based variables is difficult across organism groups, and such data are often incomplete or unavailable.</span>
-<span id="cb15-89"><a href="#cb15-89" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-90"><a href="#cb15-90" aria-hidden="true" tabindex="-1"></a>The model estimates hazard by combining:</span>
-<span id="cb15-91"><a href="#cb15-91" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>climatic suitability (C) in the receiving region  </span>
-<span id="cb15-92"><a href="#cb15-92" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>the number of weed-related scientific publications (P), derived using LLMs as a proxy for impact and concern  </span>
-<span id="cb15-93"><a href="#cb15-93" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>global occurrence counts (G), reflecting ecological generalism and spread potential  </span>
-<span id="cb15-94"><a href="#cb15-94" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-95"><a href="#cb15-95" aria-hidden="true" tabindex="-1"></a>High-scoring species can then be prioritised for more detailed risk assessments to evaluate potential harms, affected stakeholders, management feasibility, costs, and benefits.</span>
+<span id="cb15-80"><a href="#cb15-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-81"><a href="#cb15-81" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>scientific publication counts  </span>
+<span id="cb15-82"><a href="#cb15-82" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>climate suitability  </span>
+<span id="cb15-83"><a href="#cb15-83" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>species distribution  </span>
+<span id="cb15-84"><a href="#cb15-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-85"><a href="#cb15-85" aria-hidden="true" tabindex="-1"></a>to rank potential invasive taxa.</span>
+<span id="cb15-86"><a href="#cb15-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-87"><a href="#cb15-87" aria-hidden="true" tabindex="-1"></a>@buddenhagenValidatingRapidAlgorithmic2025 introduced a rapid, algorithmic weed hazard ranking model (CPG) that uses widely available data. It leverages two well-supported predictors of weediness: weediness elsewhere and climate suitability <span class="co">[</span><span class="ot">@caleyApplicationEvaluationClassification2006; @hulmeWeedRiskAssessment2012; @weberAnalysisAssessmentOutcomes2009; @randallCanPlantsCultural2016</span><span class="co">]</span>.</span>
+<span id="cb15-88"><a href="#cb15-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-89"><a href="#cb15-89" aria-hidden="true" tabindex="-1"></a>Evidence shows that an organism’s invasion history (i.e., weediness elsewhere) generally outperforms biological traits (or attributes) as a predictor of risk. This is partly because selecting consistent trait-based variables is difficult across organism groups, and such data are often incomplete or unavailable.</span>
+<span id="cb15-90"><a href="#cb15-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-91"><a href="#cb15-91" aria-hidden="true" tabindex="-1"></a>The model estimates hazard by combining:</span>
+<span id="cb15-92"><a href="#cb15-92" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-93"><a href="#cb15-93" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>climatic suitability (C) in the receiving region  </span>
+<span id="cb15-94"><a href="#cb15-94" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>the number of weed-related scientific publications (P), derived using LLMs as a proxy for impact and concern  </span>
+<span id="cb15-95"><a href="#cb15-95" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>global occurrence counts (G), reflecting ecological generalism and spread potential  </span>
 <span id="cb15-96"><a href="#cb15-96" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-97"><a href="#cb15-97" aria-hidden="true" tabindex="-1"></a><span class="fu">### Steps</span></span>
+<span id="cb15-97"><a href="#cb15-97" aria-hidden="true" tabindex="-1"></a>High-scoring species can then be prioritised for more detailed risk assessments to evaluate potential harms, affected stakeholders, management feasibility, costs, and benefits.</span>
 <span id="cb15-98"><a href="#cb15-98" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-99"><a href="#cb15-99" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Compile a dataframe with the corpus (text for querying with AI), with one row per source  </span>
-<span id="cb15-100"><a href="#cb15-100" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Develop a prompt for use with an OpenAI model (e.g. GPT‑4o‑mini)  </span>
-<span id="cb15-101"><a href="#cb15-101" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Run the prompts across the dataframe  </span>
-<span id="cb15-102"><a href="#cb15-102" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Standardise names to the GBIF backbone  </span>
-<span id="cb15-103"><a href="#cb15-103" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-104"><a href="#cb15-104" aria-hidden="true" tabindex="-1"></a><span class="fu">## Background on Large Language Models (LLMs)</span></span>
+<span id="cb15-99"><a href="#cb15-99" aria-hidden="true" tabindex="-1"></a><span class="fu">### Steps</span></span>
+<span id="cb15-100"><a href="#cb15-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-101"><a href="#cb15-101" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Compile a dataframe with the corpus (text for querying with AI), with one row per source  </span>
+<span id="cb15-102"><a href="#cb15-102" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Develop a prompt for use with an OpenAI model (e.g. GPT‑4o‑mini)  </span>
+<span id="cb15-103"><a href="#cb15-103" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Run the prompts across the dataframe  </span>
+<span id="cb15-104"><a href="#cb15-104" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Standardise names to the GBIF backbone  </span>
 <span id="cb15-105"><a href="#cb15-105" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-106"><a href="#cb15-106" aria-hidden="true" tabindex="-1"></a>Many modern large language models (LLMs) can be accessed via APIs that use a *pay-as-you-go* pricing model. Costs are typically based on the number of **tokens** processed.</span>
+<span id="cb15-106"><a href="#cb15-106" aria-hidden="true" tabindex="-1"></a><span class="fu">## Background on Large Language Models (LLMs)</span></span>
 <span id="cb15-107"><a href="#cb15-107" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-108"><a href="#cb15-108" aria-hidden="true" tabindex="-1"></a>A *token* is a unit of text used internally by LLMs. It is not the same as a word; instead, it often corresponds to word pieces (for example, parts of words or short sequences of characters). This tokenization allows models to efficiently process and generate text.</span>
+<span id="cb15-108"><a href="#cb15-108" aria-hidden="true" tabindex="-1"></a>Many modern large language models (LLMs) can be accessed via APIs that use a *pay-as-you-go* pricing model. Costs are typically based on the number of **tokens** processed.</span>
 <span id="cb15-109"><a href="#cb15-109" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-110"><a href="#cb15-110" aria-hidden="true" tabindex="-1"></a>When using an API, you are generally charged for: - **Input tokens** (text sent to the model), and\</span>
-<span id="cb15-111"><a href="#cb15-111" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Output tokens** (text generated by the model)</span>
-<span id="cb15-112"><a href="#cb15-112" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-113"><a href="#cb15-113" aria-hidden="true" tabindex="-1"></a>Pricing varies by model and provider. For example, OpenAI publishes current pricing here:\</span>
-<span id="cb15-114"><a href="#cb15-114" aria-hidden="true" tabindex="-1"></a><span class="ot">&lt;https://developers.openai.com/api/docs/pricing&gt;</span></span>
-<span id="cb15-115"><a href="#cb15-115" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-116"><a href="#cb15-116" aria-hidden="true" tabindex="-1"></a>In this project, we use the <span class="in">`gpt-4o-mini`</span> model due to its balance of cost, speed, and capability. It provides relatively concise outputs and seems to respond well to the constraints in the prompts. Other models ( e.g., newer releases like gpt-5 or higher) would require changes to the code and prompts, as APIs and model interfaces can evolve over time. I tried, it didn&#39;t work.</span>
+<span id="cb15-110"><a href="#cb15-110" aria-hidden="true" tabindex="-1"></a>A *token* is a unit of text used internally by LLMs. It is not the same as a word; instead, it often corresponds to word pieces (for example, parts of words or short sequences of characters). This tokenization allows models to efficiently process and generate text.</span>
+<span id="cb15-111"><a href="#cb15-111" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-112"><a href="#cb15-112" aria-hidden="true" tabindex="-1"></a>When using an API, you are generally charged for: - **Input tokens** (text sent to the model), and\</span>
+<span id="cb15-113"><a href="#cb15-113" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Output tokens** (text generated by the model)</span>
+<span id="cb15-114"><a href="#cb15-114" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-115"><a href="#cb15-115" aria-hidden="true" tabindex="-1"></a>Pricing varies by model and provider. For example, OpenAI publishes current pricing here:\</span>
+<span id="cb15-116"><a href="#cb15-116" aria-hidden="true" tabindex="-1"></a><span class="ot">&lt;https://developers.openai.com/api/docs/pricing&gt;</span></span>
 <span id="cb15-117"><a href="#cb15-117" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-118"><a href="#cb15-118" aria-hidden="true" tabindex="-1"></a>To access an LLM API, you also need an **API key**. This is a private credential that authenticates your requests and links usage to your account. It should be stored securely (e.g., in environment variables) and never committed to version control.</span>
+<span id="cb15-118"><a href="#cb15-118" aria-hidden="true" tabindex="-1"></a>In this project, we use the <span class="in">`gpt-4o-mini`</span> model due to its balance of cost, speed, and capability. It provides relatively concise outputs and seems to respond well to the constraints in the prompts. Other models ( e.g., newer releases like gpt-5 or higher) would require changes to the code and prompts, as APIs and model interfaces can evolve over time. I tried, it didn&#39;t work.</span>
 <span id="cb15-119"><a href="#cb15-119" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-120"><a href="#cb15-120" aria-hidden="true" tabindex="-1"></a>Similar API-based access patterns are available across multiple providers, including OpenAI, Anthropic, Google, and others.</span>
+<span id="cb15-120"><a href="#cb15-120" aria-hidden="true" tabindex="-1"></a>To access an LLM API, you also need an **API key**. This is a private credential that authenticates your requests and links usage to your account. It should be stored securely (e.g., in environment variables) and never committed to version control.</span>
 <span id="cb15-121"><a href="#cb15-121" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-122"><a href="#cb15-122" aria-hidden="true" tabindex="-1"></a><span class="fu"># Running an example</span></span>
+<span id="cb15-122"><a href="#cb15-122" aria-hidden="true" tabindex="-1"></a>Similar API-based access patterns are available across multiple providers, including OpenAI, Anthropic, Google, and others.</span>
 <span id="cb15-123"><a href="#cb15-123" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-124"><a href="#cb15-124" aria-hidden="true" tabindex="-1"></a><span class="fu">## Example data set</span></span>
+<span id="cb15-124"><a href="#cb15-124" aria-hidden="true" tabindex="-1"></a><span class="fu"># Running an example</span></span>
 <span id="cb15-125"><a href="#cb15-125" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-126"><a href="#cb15-126" aria-hidden="true" tabindex="-1"></a>This pipeline used bibliometric data downloaded from the Scopus GUI, the query structure was: TITLE-ABS-KEY ( weed<span class="sc">\*</span> OR invas<span class="sc">\*</span> OR invad<span class="sc">\*</span> OR &quot;alien plant*&quot; OR &quot;non-native plant*&quot; OR &quot;exotic plant*&quot; OR &quot;introduced plant*&quot; OR naturalised OR naturalized ) AND TITLE-ABS-KEY ( plant<span class="sc">\*</span> OR vegetation OR species ) AND NOT TITLE-ABS-KEY ( insect<span class="sc">\*</span> OR animal<span class="sc">\*</span> OR bacter<span class="sc">\*</span> OR virus<span class="sc">\*</span> ). The full scopus had 156,000 abstracts - these had to be downloaded 20,000 at a time. Processing this amount of data cost about \$40 USD and took three days. For the workshop I select a subset of 100 random articles with invasive plants or weeds mentioned and 100 that were determined by AI to be off-topic.</span>
+<span id="cb15-126"><a href="#cb15-126" aria-hidden="true" tabindex="-1"></a><span class="fu">## Example data set</span></span>
 <span id="cb15-127"><a href="#cb15-127" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-128"><a href="#cb15-128" aria-hidden="true" tabindex="-1"></a>The species names (Latin binomials) in the abstract have been manually reviewed and are entered one species per row, with repeated bibliometric data if more than one species is mentioned in the abstract. To use the typical R language the data is long with respect to unique manually identified species.</span>
+<span id="cb15-128"><a href="#cb15-128" aria-hidden="true" tabindex="-1"></a>This pipeline used bibliometric data downloaded from the Scopus GUI, the query structure was: TITLE-ABS-KEY ( weed<span class="sc">\*</span> OR invas<span class="sc">\*</span> OR invad<span class="sc">\*</span> OR &quot;alien plant*&quot; OR &quot;non-native plant*&quot; OR &quot;exotic plant*&quot; OR &quot;introduced plant*&quot; OR naturalised OR naturalized ) AND TITLE-ABS-KEY ( plant<span class="sc">\*</span> OR vegetation OR species ) AND NOT TITLE-ABS-KEY ( insect<span class="sc">\*</span> OR animal<span class="sc">\*</span> OR bacter<span class="sc">\*</span> OR virus<span class="sc">\*</span> ). The full scopus had 156,000 abstracts - these had to be downloaded 20,000 at a time. Processing this amount of data cost about \$40 USD and took three days. For the workshop I select a subset of 100 random articles with invasive plants or weeds mentioned and 100 that were determined by AI to be off-topic.</span>
 <span id="cb15-129"><a href="#cb15-129" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-130"><a href="#cb15-130" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, warning=FALSE, echo=FALSE}</span></span>
+<span id="cb15-130"><a href="#cb15-130" aria-hidden="true" tabindex="-1"></a>The species names (Latin binomials) in the abstract have been manually reviewed and are entered one species per row, with repeated bibliometric data if more than one species is mentioned in the abstract. To use the typical R language the data is long with respect to unique manually identified species.</span>
 <span id="cb15-131"><a href="#cb15-131" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-132"><a href="#cb15-132" aria-hidden="true" tabindex="-1"></a>corpus<span class="ot">&lt;-</span><span class="fu">read_xlsx</span>(<span class="st">&quot;corpus/scopus_sample_data_set.xlsx&quot;</span>) <span class="sc">%&gt;%</span> <span class="fu">distinct</span>() <span class="sc">%&gt;%</span> <span class="fu">clean_names</span>()</span>
+<span id="cb15-132"><a href="#cb15-132" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, warning=FALSE, echo=FALSE}</span></span>
 <span id="cb15-133"><a href="#cb15-133" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-134"><a href="#cb15-134" aria-hidden="true" tabindex="-1"></a><span class="co">#You must have title_abstract field in your dataframe for this pipeline - in this case you can include keyword fields.</span></span>
+<span id="cb15-134"><a href="#cb15-134" aria-hidden="true" tabindex="-1"></a>corpus<span class="ot">&lt;-</span><span class="fu">read_xlsx</span>(<span class="st">&quot;corpus/scopus_sample_data_set.xlsx&quot;</span>) <span class="sc">%&gt;%</span> <span class="fu">distinct</span>() <span class="sc">%&gt;%</span> <span class="fu">clean_names</span>()</span>
 <span id="cb15-135"><a href="#cb15-135" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-136"><a href="#cb15-136" aria-hidden="true" tabindex="-1"></a><span class="co">#dput(names(corpus))</span></span>
+<span id="cb15-136"><a href="#cb15-136" aria-hidden="true" tabindex="-1"></a><span class="co">#You must have title_abstract field in your dataframe for this pipeline - in this case you can include keyword fields.</span></span>
 <span id="cb15-137"><a href="#cb15-137" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-138"><a href="#cb15-138" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-138"><a href="#cb15-138" aria-hidden="true" tabindex="-1"></a><span class="co">#dput(names(corpus))</span></span>
 <span id="cb15-139"><a href="#cb15-139" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-140"><a href="#cb15-140" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-141"><a href="#cb15-141" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb15-141"><a href="#cb15-141" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-142"><a href="#cb15-142" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-143"><a href="#cb15-143" aria-hidden="true" tabindex="-1"></a>The corpus contains <span class="in">`r length(unique(corpus$eid))`</span> records and</span>
-<span id="cb15-144"><a href="#cb15-144" aria-hidden="true" tabindex="-1"></a><span class="in">`r length(unique(corpus$manual_calls_weeds))`</span> manually identified species.</span>
-<span id="cb15-145"><a href="#cb15-145" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-146"><a href="#cb15-146" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-147"><a href="#cb15-147" aria-hidden="true" tabindex="-1"></a><span class="fu">## Prompt set up</span></span>
+<span id="cb15-143"><a href="#cb15-143" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb15-144"><a href="#cb15-144" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-145"><a href="#cb15-145" aria-hidden="true" tabindex="-1"></a>The corpus contains <span class="in">`r length(unique(corpus$eid))`</span> records and</span>
+<span id="cb15-146"><a href="#cb15-146" aria-hidden="true" tabindex="-1"></a><span class="in">`r length(unique(corpus$manual_calls_weeds))`</span> manually identified species.</span>
+<span id="cb15-147"><a href="#cb15-147" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-148"><a href="#cb15-148" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-149"><a href="#cb15-149" aria-hidden="true" tabindex="-1"></a>This AI pipeline uses a chat completion approach with an LLM to populate columns in a dataframe through structured prompts. Each prompt consists of two components: **system text** (instructions that define behaviour and constraints) and **user text** (the specific task applied to each record).</span>
+<span id="cb15-149"><a href="#cb15-149" aria-hidden="true" tabindex="-1"></a><span class="fu">## Prompt set up</span></span>
 <span id="cb15-150"><a href="#cb15-150" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-151"><a href="#cb15-151" aria-hidden="true" tabindex="-1"></a>Prompts can be written manually or generated iteratively by asking an LLM to refine or expand an example prompt to cover multiple topics or variables. In this workflow, the initial prompt is designed to classify whether an article is relevant (“on topic”). Subsequent extraction prompts are only applied to records that pass this filter, reducing both runtime and token usage. This filtering step is optional but recommended for efficiency.</span>
+<span id="cb15-151"><a href="#cb15-151" aria-hidden="true" tabindex="-1"></a>This AI pipeline uses a chat completion approach with an LLM to populate columns in a dataframe through structured prompts. Each prompt consists of two components: **system text** (instructions that define behaviour and constraints) and **user text** (the specific task applied to each record).</span>
 <span id="cb15-152"><a href="#cb15-152" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-153"><a href="#cb15-153" aria-hidden="true" tabindex="-1"></a>The prompt configuration is stored as a <span class="in">`topic_settings`</span> object in the code, with the corresponding prompt defined in:</span>
-<span id="cb15-154"><a href="#cb15-154" aria-hidden="true" tabindex="-1"></a> &quot;prompts/prompt_1.R&quot;.</span>
-<span id="cb15-155"><a href="#cb15-155" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb15-156"><a href="#cb15-156" aria-hidden="true" tabindex="-1"></a> When setting up prompts, you should explicitly define:</span>
-<span id="cb15-157"><a href="#cb15-157" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>the task (e.g. classification, entity extraction, counting)</span>
-<span id="cb15-158"><a href="#cb15-158" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>the expected output format (e.g. “yes/no”, delimited lists, or structured fields)</span>
-<span id="cb15-159"><a href="#cb15-159" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>any constraints or definitions (e.g. what qualifies as “weed-related”)</span>
-<span id="cb15-160"><a href="#cb15-160" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>how to handle uncertainty (e.g. return “no” or “unknown”)</span>
-<span id="cb15-161"><a href="#cb15-161" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-162"><a href="#cb15-162" aria-hidden="true" tabindex="-1"></a>Clear, consistent instructions improve reproducibility and downstream parsing.</span>
+<span id="cb15-153"><a href="#cb15-153" aria-hidden="true" tabindex="-1"></a>Prompts can be written manually or generated iteratively by asking an LLM to refine or expand an example prompt to cover multiple topics or variables. In this workflow, the initial prompt is designed to classify whether an article is relevant (“on topic”). Subsequent extraction prompts are only applied to records that pass this filter, reducing both runtime and token usage. This filtering step is optional but recommended for efficiency.</span>
+<span id="cb15-154"><a href="#cb15-154" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-155"><a href="#cb15-155" aria-hidden="true" tabindex="-1"></a>The prompt configuration is stored as a <span class="in">`topic_settings`</span> object in the code, with the corresponding prompt defined in:</span>
+<span id="cb15-156"><a href="#cb15-156" aria-hidden="true" tabindex="-1"></a> &quot;prompts/prompt_1.R&quot;.</span>
+<span id="cb15-157"><a href="#cb15-157" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb15-158"><a href="#cb15-158" aria-hidden="true" tabindex="-1"></a> When setting up prompts, you should explicitly define:</span>
+<span id="cb15-159"><a href="#cb15-159" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>the task (e.g. classification, entity extraction, counting)</span>
+<span id="cb15-160"><a href="#cb15-160" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>the expected output format (e.g. “yes/no”, delimited lists, or structured fields)</span>
+<span id="cb15-161"><a href="#cb15-161" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>any constraints or definitions (e.g. what qualifies as “weed-related”)</span>
+<span id="cb15-162"><a href="#cb15-162" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>how to handle uncertainty (e.g. return “no” or “unknown”)</span>
 <span id="cb15-163"><a href="#cb15-163" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-164"><a href="#cb15-164" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-165"><a href="#cb15-165" aria-hidden="true" tabindex="-1"></a><span class="fu">## Run the LLM‑based data recovery</span></span>
+<span id="cb15-164"><a href="#cb15-164" aria-hidden="true" tabindex="-1"></a>Clear, consistent instructions improve reproducibility and downstream parsing.</span>
+<span id="cb15-165"><a href="#cb15-165" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-166"><a href="#cb15-166" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-167"><a href="#cb15-167" aria-hidden="true" tabindex="-1"></a>To run the pipeline, configure the user settings that control data input/output, model behaviour, and processing workflow.</span>
+<span id="cb15-167"><a href="#cb15-167" aria-hidden="true" tabindex="-1"></a><span class="fu">## Run the LLM‑based data recovery</span></span>
 <span id="cb15-168"><a href="#cb15-168" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-169"><a href="#cb15-169" aria-hidden="true" tabindex="-1"></a>Key elements to specify:</span>
+<span id="cb15-169"><a href="#cb15-169" aria-hidden="true" tabindex="-1"></a>To run the pipeline, configure the user settings that control data input/output, model behaviour, and processing workflow.</span>
 <span id="cb15-170"><a href="#cb15-170" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-171"><a href="#cb15-171" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**API key**: stored in a local text file and referenced via <span class="in">`api_key_file`</span>  </span>
-<span id="cb15-172"><a href="#cb15-172" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Input data**: ensure the dataframe includes a column named <span class="in">`title_abstract`</span> containing the text to analyse  </span>
-<span id="cb15-173"><a href="#cb15-173" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Output directory**: where results will be written  </span>
-<span id="cb15-174"><a href="#cb15-174" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Model selection**: e.g. <span class="in">`gpt-4o-mini`</span>, balancing cost and performance  </span>
-<span id="cb15-175"><a href="#cb15-175" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Chunk size**: splits processing into batches to improve stability and enable restart from partial runs  </span>
-<span id="cb15-176"><a href="#cb15-176" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Topic filter settings**: column name and pattern defining “on topic” records  </span>
-<span id="cb15-177"><a href="#cb15-177" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Entity extraction settings**: column name and delimiter for parsed outputs  (in this case we mean species - since it is tied to the taxonomy)</span>
-<span id="cb15-178"><a href="#cb15-178" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Taxonomic standardisation**: e.g. GBIF kingdom for downstream name matching  </span>
-<span id="cb15-179"><a href="#cb15-179" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-180"><a href="#cb15-180" aria-hidden="true" tabindex="-1"></a>Chunking is especially important for large datasets. For example, with ~1000 articles per chunk, each topic may take approximately 9–15 minutes. If a run fails, chunking allows you to resume without reprocessing completed records (with some changes to the script).</span>
+<span id="cb15-171"><a href="#cb15-171" aria-hidden="true" tabindex="-1"></a>Key elements to specify:</span>
+<span id="cb15-172"><a href="#cb15-172" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-173"><a href="#cb15-173" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**API key**: stored in a local text file and referenced via <span class="in">`api_key_file`</span>  </span>
+<span id="cb15-174"><a href="#cb15-174" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Input data**: ensure the dataframe includes a column named <span class="in">`title_abstract`</span> containing the text to analyse  </span>
+<span id="cb15-175"><a href="#cb15-175" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Output directory**: where results will be written  </span>
+<span id="cb15-176"><a href="#cb15-176" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Model selection**: e.g. <span class="in">`gpt-4o-mini`</span>, balancing cost and performance  </span>
+<span id="cb15-177"><a href="#cb15-177" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Chunk size**: splits processing into batches to improve stability and enable restart from partial runs  </span>
+<span id="cb15-178"><a href="#cb15-178" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Topic filter settings**: column name and pattern defining “on topic” records  </span>
+<span id="cb15-179"><a href="#cb15-179" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Entity extraction settings**: column name and delimiter for parsed outputs  (in this case we mean species - since it is tied to the taxonomy)</span>
+<span id="cb15-180"><a href="#cb15-180" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Taxonomic standardisation**: e.g. GBIF kingdom for downstream name matching  </span>
 <span id="cb15-181"><a href="#cb15-181" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-182"><a href="#cb15-182" aria-hidden="true" tabindex="-1"></a><span class="in">```{r AI extraction}</span></span>
-<span id="cb15-183"><a href="#cb15-183" aria-hidden="true" tabindex="-1"></a><span class="do">## AI biosecurity workshop generalized</span></span>
-<span id="cb15-184"><a href="#cb15-184" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-185"><a href="#cb15-185" aria-hidden="true" tabindex="-1"></a><span class="co"># ===========================================================</span></span>
-<span id="cb15-186"><a href="#cb15-186" aria-hidden="true" tabindex="-1"></a><span class="co"># LLM ANALYSIS PIPELINE — GENERALISED SCRIPT</span></span>
+<span id="cb15-182"><a href="#cb15-182" aria-hidden="true" tabindex="-1"></a>Chunking is especially important for large datasets. For example, with ~1000 articles per chunk, each topic may take approximately 9–15 minutes. If a run fails, chunking allows you to resume without reprocessing completed records (with some changes to the script).</span>
+<span id="cb15-183"><a href="#cb15-183" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-184"><a href="#cb15-184" aria-hidden="true" tabindex="-1"></a><span class="in">```{r AI extraction}</span></span>
+<span id="cb15-185"><a href="#cb15-185" aria-hidden="true" tabindex="-1"></a><span class="do">## AI biosecurity workshop generalized</span></span>
+<span id="cb15-186"><a href="#cb15-186" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-187"><a href="#cb15-187" aria-hidden="true" tabindex="-1"></a><span class="co"># ===========================================================</span></span>
-<span id="cb15-188"><a href="#cb15-188" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-189"><a href="#cb15-189" aria-hidden="true" tabindex="-1"></a><span class="co"># -------------------------------</span></span>
-<span id="cb15-190"><a href="#cb15-190" aria-hidden="true" tabindex="-1"></a><span class="co"># USER SETTINGS (EDIT THIS BLOCK)</span></span>
+<span id="cb15-188"><a href="#cb15-188" aria-hidden="true" tabindex="-1"></a><span class="co"># LLM ANALYSIS PIPELINE — GENERALISED SCRIPT</span></span>
+<span id="cb15-189"><a href="#cb15-189" aria-hidden="true" tabindex="-1"></a><span class="co"># ===========================================================</span></span>
+<span id="cb15-190"><a href="#cb15-190" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-191"><a href="#cb15-191" aria-hidden="true" tabindex="-1"></a><span class="co"># -------------------------------</span></span>
-<span id="cb15-192"><a href="#cb15-192" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-193"><a href="#cb15-193" aria-hidden="true" tabindex="-1"></a>settings <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
-<span id="cb15-194"><a href="#cb15-194" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb15-195"><a href="#cb15-195" aria-hidden="true" tabindex="-1"></a>  <span class="co"># INPUT DATA</span></span>
-<span id="cb15-196"><a href="#cb15-196" aria-hidden="true" tabindex="-1"></a>  <span class="at">input_file =</span> <span class="st">&quot;corpus/scopus_sample_data_set.xlsx&quot;</span>,</span>
-<span id="cb15-197"><a href="#cb15-197" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb15-198"><a href="#cb15-198" aria-hidden="true" tabindex="-1"></a>  <span class="co"># OUTPUT</span></span>
-<span id="cb15-199"><a href="#cb15-199" aria-hidden="true" tabindex="-1"></a>  <span class="at">out_dir =</span> <span class="st">&quot;./outputs/example_ai_run&quot;</span>,</span>
-<span id="cb15-200"><a href="#cb15-200" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb15-201"><a href="#cb15-201" aria-hidden="true" tabindex="-1"></a>  <span class="co"># MODEL + PROCESSING</span></span>
-<span id="cb15-202"><a href="#cb15-202" aria-hidden="true" tabindex="-1"></a>  <span class="at">model =</span> <span class="st">&quot;gpt-4o-mini&quot;</span>,</span>
-<span id="cb15-203"><a href="#cb15-203" aria-hidden="true" tabindex="-1"></a>  <span class="at">chunk_size =</span> <span class="dv">100</span>,</span>
-<span id="cb15-204"><a href="#cb15-204" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb15-205"><a href="#cb15-205" aria-hidden="true" tabindex="-1"></a>  <span class="co"># TOPIC FILTER COLUMN (from topic_settings$output_column)</span></span>
-<span id="cb15-206"><a href="#cb15-206" aria-hidden="true" tabindex="-1"></a>  <span class="at">on_topic_column =</span> <span class="st">&quot;on_topic_parsed&quot;</span>,   <span class="co"># &lt;-- changeable</span></span>
-<span id="cb15-207"><a href="#cb15-207" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb15-208"><a href="#cb15-208" aria-hidden="true" tabindex="-1"></a>  <span class="co"># STRING THAT DEFINES &quot;YES&quot;</span></span>
-<span id="cb15-209"><a href="#cb15-209" aria-hidden="true" tabindex="-1"></a>  <span class="at">on_topic_pattern =</span> <span class="st">&quot;^yes&quot;</span>,</span>
-<span id="cb15-210"><a href="#cb15-210" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb15-211"><a href="#cb15-211" aria-hidden="true" tabindex="-1"></a>  <span class="co"># ENTITY COLUMN (parsed names from AI)</span></span>
-<span id="cb15-212"><a href="#cb15-212" aria-hidden="true" tabindex="-1"></a>  <span class="at">entity_column =</span> <span class="st">&quot;weed_name_parsed&quot;</span>,            <span class="co"># &lt;-- changeable</span></span>
-<span id="cb15-213"><a href="#cb15-213" aria-hidden="true" tabindex="-1"></a>  <span class="at">entity_delim =</span> <span class="st">&quot;;&quot;</span>,</span>
-<span id="cb15-214"><a href="#cb15-214" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb15-215"><a href="#cb15-215" aria-hidden="true" tabindex="-1"></a>  <span class="co"># GBIF SETTINGS</span></span>
-<span id="cb15-216"><a href="#cb15-216" aria-hidden="true" tabindex="-1"></a>  <span class="at">gbif_kingdom =</span> <span class="st">&quot;Plantae&quot;</span>,                      <span class="co"># change if needed</span></span>
-<span id="cb15-217"><a href="#cb15-217" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb15-218"><a href="#cb15-218" aria-hidden="true" tabindex="-1"></a>  <span class="co"># API KEY FILE</span></span>
-<span id="cb15-219"><a href="#cb15-219" aria-hidden="true" tabindex="-1"></a>  <span class="at">api_key_file =</span> <span class="st">&quot;Biosecurity workshop api/Biosecurity_symposium_api.txt&quot;</span></span>
-<span id="cb15-220"><a href="#cb15-220" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb15-221"><a href="#cb15-221" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-222"><a href="#cb15-222" aria-hidden="true" tabindex="-1"></a><span class="co"># -------------------------------</span></span>
-<span id="cb15-223"><a href="#cb15-223" aria-hidden="true" tabindex="-1"></a><span class="co"># LOAD DATA</span></span>
+<span id="cb15-192"><a href="#cb15-192" aria-hidden="true" tabindex="-1"></a><span class="co"># USER SETTINGS (EDIT THIS BLOCK)</span></span>
+<span id="cb15-193"><a href="#cb15-193" aria-hidden="true" tabindex="-1"></a><span class="co"># -------------------------------</span></span>
+<span id="cb15-194"><a href="#cb15-194" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-195"><a href="#cb15-195" aria-hidden="true" tabindex="-1"></a>settings <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb15-196"><a href="#cb15-196" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb15-197"><a href="#cb15-197" aria-hidden="true" tabindex="-1"></a>  <span class="co"># INPUT DATA</span></span>
+<span id="cb15-198"><a href="#cb15-198" aria-hidden="true" tabindex="-1"></a>  <span class="at">input_file =</span> <span class="st">&quot;corpus/scopus_sample_data_set.xlsx&quot;</span>,</span>
+<span id="cb15-199"><a href="#cb15-199" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb15-200"><a href="#cb15-200" aria-hidden="true" tabindex="-1"></a>  <span class="co"># OUTPUT</span></span>
+<span id="cb15-201"><a href="#cb15-201" aria-hidden="true" tabindex="-1"></a>  <span class="at">out_dir =</span> <span class="st">&quot;./outputs/example_ai_run&quot;</span>,</span>
+<span id="cb15-202"><a href="#cb15-202" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb15-203"><a href="#cb15-203" aria-hidden="true" tabindex="-1"></a>  <span class="co"># MODEL + PROCESSING</span></span>
+<span id="cb15-204"><a href="#cb15-204" aria-hidden="true" tabindex="-1"></a>  <span class="at">model =</span> <span class="st">&quot;gpt-4o-mini&quot;</span>,</span>
+<span id="cb15-205"><a href="#cb15-205" aria-hidden="true" tabindex="-1"></a>  <span class="at">chunk_size =</span> <span class="dv">100</span>,</span>
+<span id="cb15-206"><a href="#cb15-206" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb15-207"><a href="#cb15-207" aria-hidden="true" tabindex="-1"></a>  <span class="co"># TOPIC FILTER COLUMN (from topic_settings$output_column)</span></span>
+<span id="cb15-208"><a href="#cb15-208" aria-hidden="true" tabindex="-1"></a>  <span class="at">on_topic_column =</span> <span class="st">&quot;on_topic_parsed&quot;</span>,   <span class="co"># &lt;-- changeable</span></span>
+<span id="cb15-209"><a href="#cb15-209" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb15-210"><a href="#cb15-210" aria-hidden="true" tabindex="-1"></a>  <span class="co"># STRING THAT DEFINES &quot;YES&quot;</span></span>
+<span id="cb15-211"><a href="#cb15-211" aria-hidden="true" tabindex="-1"></a>  <span class="at">on_topic_pattern =</span> <span class="st">&quot;^yes&quot;</span>,</span>
+<span id="cb15-212"><a href="#cb15-212" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb15-213"><a href="#cb15-213" aria-hidden="true" tabindex="-1"></a>  <span class="co"># ENTITY COLUMN (parsed names from AI)</span></span>
+<span id="cb15-214"><a href="#cb15-214" aria-hidden="true" tabindex="-1"></a>  <span class="at">entity_column =</span> <span class="st">&quot;weed_name_parsed&quot;</span>,            <span class="co"># &lt;-- changeable</span></span>
+<span id="cb15-215"><a href="#cb15-215" aria-hidden="true" tabindex="-1"></a>  <span class="at">entity_delim =</span> <span class="st">&quot;;&quot;</span>,</span>
+<span id="cb15-216"><a href="#cb15-216" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb15-217"><a href="#cb15-217" aria-hidden="true" tabindex="-1"></a>  <span class="co"># GBIF SETTINGS</span></span>
+<span id="cb15-218"><a href="#cb15-218" aria-hidden="true" tabindex="-1"></a>  <span class="at">gbif_kingdom =</span> <span class="st">&quot;Plantae&quot;</span>,                      <span class="co"># change if needed</span></span>
+<span id="cb15-219"><a href="#cb15-219" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb15-220"><a href="#cb15-220" aria-hidden="true" tabindex="-1"></a>  <span class="co"># API KEY FILE</span></span>
+<span id="cb15-221"><a href="#cb15-221" aria-hidden="true" tabindex="-1"></a>  <span class="at">api_key_file =</span> <span class="st">&quot;Biosecurity workshop api/Biosecurity_symposium_api.txt&quot;</span></span>
+<span id="cb15-222"><a href="#cb15-222" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb15-223"><a href="#cb15-223" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-224"><a href="#cb15-224" aria-hidden="true" tabindex="-1"></a><span class="co"># -------------------------------</span></span>
-<span id="cb15-225"><a href="#cb15-225" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-226"><a href="#cb15-226" aria-hidden="true" tabindex="-1"></a>corpus <span class="ot">&lt;-</span> <span class="fu">read_xlsx</span>(settings<span class="sc">$</span>input_file) <span class="sc">%&gt;%</span></span>
-<span id="cb15-227"><a href="#cb15-227" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb15-228"><a href="#cb15-228" aria-hidden="true" tabindex="-1"></a>  <span class="fu">clean_names</span>() <span class="co"># &lt; may need to read in with another function if this is in a csv format Scopus uses for outputs</span></span>
-<span id="cb15-229"><a href="#cb15-229" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-230"><a href="#cb15-230" aria-hidden="true" tabindex="-1"></a><span class="co"># Build text field</span></span>
-<span id="cb15-231"><a href="#cb15-231" aria-hidden="true" tabindex="-1"></a>corpus <span class="ot">&lt;-</span> corpus <span class="sc">%&gt;%</span></span>
-<span id="cb15-232"><a href="#cb15-232" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rowwise</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb15-233"><a href="#cb15-233" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb15-234"><a href="#cb15-234" aria-hidden="true" tabindex="-1"></a>    <span class="at">title_abstract =</span> stringr<span class="sc">::</span><span class="fu">str_squish</span>(</span>
-<span id="cb15-235"><a href="#cb15-235" aria-hidden="true" tabindex="-1"></a>      <span class="fu">paste</span>(</span>
-<span id="cb15-236"><a href="#cb15-236" aria-hidden="true" tabindex="-1"></a>        <span class="fu">na.omit</span>(<span class="fu">c</span>(title, abstract, author_keywords, index_keywords)),</span>
-<span id="cb15-237"><a href="#cb15-237" aria-hidden="true" tabindex="-1"></a>        <span class="at">collapse =</span> <span class="st">&quot; &quot;</span></span>
-<span id="cb15-238"><a href="#cb15-238" aria-hidden="true" tabindex="-1"></a>      )</span>
-<span id="cb15-239"><a href="#cb15-239" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb15-240"><a href="#cb15-240" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
-<span id="cb15-241"><a href="#cb15-241" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span>
-<span id="cb15-242"><a href="#cb15-242" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-243"><a href="#cb15-243" aria-hidden="true" tabindex="-1"></a>data_pubs_all <span class="ot">&lt;-</span> corpus</span>
+<span id="cb15-225"><a href="#cb15-225" aria-hidden="true" tabindex="-1"></a><span class="co"># LOAD DATA</span></span>
+<span id="cb15-226"><a href="#cb15-226" aria-hidden="true" tabindex="-1"></a><span class="co"># -------------------------------</span></span>
+<span id="cb15-227"><a href="#cb15-227" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-228"><a href="#cb15-228" aria-hidden="true" tabindex="-1"></a>corpus <span class="ot">&lt;-</span> <span class="fu">read_xlsx</span>(settings<span class="sc">$</span>input_file) <span class="sc">%&gt;%</span></span>
+<span id="cb15-229"><a href="#cb15-229" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb15-230"><a href="#cb15-230" aria-hidden="true" tabindex="-1"></a>  <span class="fu">clean_names</span>() <span class="co"># &lt; may need to read in with another function if this is in a csv format Scopus uses for outputs</span></span>
+<span id="cb15-231"><a href="#cb15-231" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-232"><a href="#cb15-232" aria-hidden="true" tabindex="-1"></a><span class="co"># Build text field</span></span>
+<span id="cb15-233"><a href="#cb15-233" aria-hidden="true" tabindex="-1"></a>corpus <span class="ot">&lt;-</span> corpus <span class="sc">%&gt;%</span></span>
+<span id="cb15-234"><a href="#cb15-234" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rowwise</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb15-235"><a href="#cb15-235" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb15-236"><a href="#cb15-236" aria-hidden="true" tabindex="-1"></a>    <span class="at">title_abstract =</span> stringr<span class="sc">::</span><span class="fu">str_squish</span>(</span>
+<span id="cb15-237"><a href="#cb15-237" aria-hidden="true" tabindex="-1"></a>      <span class="fu">paste</span>(</span>
+<span id="cb15-238"><a href="#cb15-238" aria-hidden="true" tabindex="-1"></a>        <span class="fu">na.omit</span>(<span class="fu">c</span>(title, abstract, author_keywords, index_keywords)),</span>
+<span id="cb15-239"><a href="#cb15-239" aria-hidden="true" tabindex="-1"></a>        <span class="at">collapse =</span> <span class="st">&quot; &quot;</span></span>
+<span id="cb15-240"><a href="#cb15-240" aria-hidden="true" tabindex="-1"></a>      )</span>
+<span id="cb15-241"><a href="#cb15-241" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb15-242"><a href="#cb15-242" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb15-243"><a href="#cb15-243" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span>
 <span id="cb15-244"><a href="#cb15-244" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-245"><a href="#cb15-245" aria-hidden="true" tabindex="-1"></a>data_pubs <span class="ot">&lt;-</span> data_pubs_all <span class="sc">%&gt;%</span></span>
-<span id="cb15-246"><a href="#cb15-246" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>(eid, <span class="at">.keep_all =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb15-247"><a href="#cb15-247" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">row_id =</span> <span class="fu">row_number</span>())</span>
-<span id="cb15-248"><a href="#cb15-248" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-249"><a href="#cb15-249" aria-hidden="true" tabindex="-1"></a><span class="co"># ===========================================================</span></span>
-<span id="cb15-250"><a href="#cb15-250" aria-hidden="true" tabindex="-1"></a><span class="co"># API KEY</span></span>
+<span id="cb15-245"><a href="#cb15-245" aria-hidden="true" tabindex="-1"></a>data_pubs_all <span class="ot">&lt;-</span> corpus</span>
+<span id="cb15-246"><a href="#cb15-246" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-247"><a href="#cb15-247" aria-hidden="true" tabindex="-1"></a>data_pubs <span class="ot">&lt;-</span> data_pubs_all <span class="sc">%&gt;%</span></span>
+<span id="cb15-248"><a href="#cb15-248" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>(eid, <span class="at">.keep_all =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb15-249"><a href="#cb15-249" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">row_id =</span> <span class="fu">row_number</span>())</span>
+<span id="cb15-250"><a href="#cb15-250" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-251"><a href="#cb15-251" aria-hidden="true" tabindex="-1"></a><span class="co"># ===========================================================</span></span>
-<span id="cb15-252"><a href="#cb15-252" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-253"><a href="#cb15-253" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">file.exists</span>(settings<span class="sc">$</span>api_key_file)) {</span>
-<span id="cb15-254"><a href="#cb15-254" aria-hidden="true" tabindex="-1"></a>  <span class="fu">Sys.setenv</span>(<span class="at">OPENAI_API_KEY =</span> <span class="fu">readLines</span>(settings<span class="sc">$</span>api_key_file, <span class="at">warn =</span> <span class="cn">FALSE</span>))</span>
-<span id="cb15-255"><a href="#cb15-255" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
-<span id="cb15-256"><a href="#cb15-256" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stop</span>(<span class="st">&quot;API key file not found.&quot;</span>)</span>
-<span id="cb15-257"><a href="#cb15-257" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb15-258"><a href="#cb15-258" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-259"><a href="#cb15-259" aria-hidden="true" tabindex="-1"></a><span class="co"># ===========================================================</span></span>
-<span id="cb15-260"><a href="#cb15-260" aria-hidden="true" tabindex="-1"></a><span class="co"># LOAD PROMPTS + FUNCTIONS</span></span>
+<span id="cb15-252"><a href="#cb15-252" aria-hidden="true" tabindex="-1"></a><span class="co"># API KEY</span></span>
+<span id="cb15-253"><a href="#cb15-253" aria-hidden="true" tabindex="-1"></a><span class="co"># ===========================================================</span></span>
+<span id="cb15-254"><a href="#cb15-254" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-255"><a href="#cb15-255" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">file.exists</span>(settings<span class="sc">$</span>api_key_file)) {</span>
+<span id="cb15-256"><a href="#cb15-256" aria-hidden="true" tabindex="-1"></a>  <span class="fu">Sys.setenv</span>(<span class="at">OPENAI_API_KEY =</span> <span class="fu">readLines</span>(settings<span class="sc">$</span>api_key_file, <span class="at">warn =</span> <span class="cn">FALSE</span>))</span>
+<span id="cb15-257"><a href="#cb15-257" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
+<span id="cb15-258"><a href="#cb15-258" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stop</span>(<span class="st">&quot;API key file not found.&quot;</span>)</span>
+<span id="cb15-259"><a href="#cb15-259" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb15-260"><a href="#cb15-260" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-261"><a href="#cb15-261" aria-hidden="true" tabindex="-1"></a><span class="co"># ===========================================================</span></span>
-<span id="cb15-262"><a href="#cb15-262" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-263"><a href="#cb15-263" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">&quot;prompts/prompt_1.R&quot;</span>)</span>
-<span id="cb15-264"><a href="#cb15-264" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">&quot;functions/f_ai_text_analysis.R&quot;</span>)</span>
-<span id="cb15-265"><a href="#cb15-265" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">&quot;functions/f_get_gbif_backbone_ids_from_df.R&quot;</span>)</span>
-<span id="cb15-266"><a href="#cb15-266" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-267"><a href="#cb15-267" aria-hidden="true" tabindex="-1"></a><span class="co"># -------------------------------</span></span>
-<span id="cb15-268"><a href="#cb15-268" aria-hidden="true" tabindex="-1"></a><span class="co"># BUILD title_abstract FIELD</span></span>
+<span id="cb15-262"><a href="#cb15-262" aria-hidden="true" tabindex="-1"></a><span class="co"># LOAD PROMPTS + FUNCTIONS</span></span>
+<span id="cb15-263"><a href="#cb15-263" aria-hidden="true" tabindex="-1"></a><span class="co"># ===========================================================</span></span>
+<span id="cb15-264"><a href="#cb15-264" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-265"><a href="#cb15-265" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">&quot;prompts/prompt_1.R&quot;</span>)</span>
+<span id="cb15-266"><a href="#cb15-266" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">&quot;functions/f_ai_text_analysis.R&quot;</span>)</span>
+<span id="cb15-267"><a href="#cb15-267" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">&quot;functions/f_get_gbif_backbone_ids_from_df.R&quot;</span>)</span>
+<span id="cb15-268"><a href="#cb15-268" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-269"><a href="#cb15-269" aria-hidden="true" tabindex="-1"></a><span class="co"># -------------------------------</span></span>
-<span id="cb15-270"><a href="#cb15-270" aria-hidden="true" tabindex="-1"></a>corpus <span class="ot">&lt;-</span> corpus <span class="sc">%&gt;%</span></span>
-<span id="cb15-271"><a href="#cb15-271" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rowwise</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb15-272"><a href="#cb15-272" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb15-273"><a href="#cb15-273" aria-hidden="true" tabindex="-1"></a>    <span class="at">title_abstract =</span> stringr<span class="sc">::</span><span class="fu">str_squish</span>(</span>
-<span id="cb15-274"><a href="#cb15-274" aria-hidden="true" tabindex="-1"></a>      <span class="fu">paste</span>(<span class="fu">na.omit</span>(<span class="fu">c</span>(title, abstract, author_keywords, index_keywords)),</span>
-<span id="cb15-275"><a href="#cb15-275" aria-hidden="true" tabindex="-1"></a>            <span class="at">collapse =</span> <span class="st">&quot; &quot;</span>)</span>
-<span id="cb15-276"><a href="#cb15-276" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb15-277"><a href="#cb15-277" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
-<span id="cb15-278"><a href="#cb15-278" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span>
-<span id="cb15-279"><a href="#cb15-279" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-280"><a href="#cb15-280" aria-hidden="true" tabindex="-1"></a>data_pubs_all <span class="ot">&lt;-</span> corpus</span>
+<span id="cb15-270"><a href="#cb15-270" aria-hidden="true" tabindex="-1"></a><span class="co"># BUILD title_abstract FIELD</span></span>
+<span id="cb15-271"><a href="#cb15-271" aria-hidden="true" tabindex="-1"></a><span class="co"># -------------------------------</span></span>
+<span id="cb15-272"><a href="#cb15-272" aria-hidden="true" tabindex="-1"></a>corpus <span class="ot">&lt;-</span> corpus <span class="sc">%&gt;%</span></span>
+<span id="cb15-273"><a href="#cb15-273" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rowwise</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb15-274"><a href="#cb15-274" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb15-275"><a href="#cb15-275" aria-hidden="true" tabindex="-1"></a>    <span class="at">title_abstract =</span> stringr<span class="sc">::</span><span class="fu">str_squish</span>(</span>
+<span id="cb15-276"><a href="#cb15-276" aria-hidden="true" tabindex="-1"></a>      <span class="fu">paste</span>(<span class="fu">na.omit</span>(<span class="fu">c</span>(title, abstract, author_keywords, index_keywords)),</span>
+<span id="cb15-277"><a href="#cb15-277" aria-hidden="true" tabindex="-1"></a>            <span class="at">collapse =</span> <span class="st">&quot; &quot;</span>)</span>
+<span id="cb15-278"><a href="#cb15-278" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb15-279"><a href="#cb15-279" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb15-280"><a href="#cb15-280" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span>
 <span id="cb15-281"><a href="#cb15-281" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-282"><a href="#cb15-282" aria-hidden="true" tabindex="-1"></a>data_pubs <span class="ot">&lt;-</span> data_pubs_all <span class="sc">%&gt;%</span></span>
-<span id="cb15-283"><a href="#cb15-283" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>(eid, <span class="at">.keep_all =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb15-284"><a href="#cb15-284" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">row_id =</span> <span class="fu">row_number</span>())</span>
-<span id="cb15-285"><a href="#cb15-285" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-286"><a href="#cb15-286" aria-hidden="true" tabindex="-1"></a><span class="co"># -------------------------------</span></span>
-<span id="cb15-287"><a href="#cb15-287" aria-hidden="true" tabindex="-1"></a><span class="co"># CREATE OUTPUT DIR</span></span>
+<span id="cb15-282"><a href="#cb15-282" aria-hidden="true" tabindex="-1"></a>data_pubs_all <span class="ot">&lt;-</span> corpus</span>
+<span id="cb15-283"><a href="#cb15-283" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-284"><a href="#cb15-284" aria-hidden="true" tabindex="-1"></a>data_pubs <span class="ot">&lt;-</span> data_pubs_all <span class="sc">%&gt;%</span></span>
+<span id="cb15-285"><a href="#cb15-285" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>(eid, <span class="at">.keep_all =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb15-286"><a href="#cb15-286" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">row_id =</span> <span class="fu">row_number</span>())</span>
+<span id="cb15-287"><a href="#cb15-287" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-288"><a href="#cb15-288" aria-hidden="true" tabindex="-1"></a><span class="co"># -------------------------------</span></span>
-<span id="cb15-289"><a href="#cb15-289" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">dir.exists</span>(settings<span class="sc">$</span>out_dir)) <span class="fu">dir.create</span>(settings<span class="sc">$</span>out_dir, <span class="at">recursive =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb15-290"><a href="#cb15-290" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-291"><a href="#cb15-291" aria-hidden="true" tabindex="-1"></a><span class="co"># ===========================================================</span></span>
-<span id="cb15-292"><a href="#cb15-292" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. RUN TOPIC FILTER (ROW 1 OF topic_settings)</span></span>
+<span id="cb15-289"><a href="#cb15-289" aria-hidden="true" tabindex="-1"></a><span class="co"># CREATE OUTPUT DIR</span></span>
+<span id="cb15-290"><a href="#cb15-290" aria-hidden="true" tabindex="-1"></a><span class="co"># -------------------------------</span></span>
+<span id="cb15-291"><a href="#cb15-291" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">dir.exists</span>(settings<span class="sc">$</span>out_dir)) <span class="fu">dir.create</span>(settings<span class="sc">$</span>out_dir, <span class="at">recursive =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb15-292"><a href="#cb15-292" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-293"><a href="#cb15-293" aria-hidden="true" tabindex="-1"></a><span class="co"># ===========================================================</span></span>
-<span id="cb15-294"><a href="#cb15-294" aria-hidden="true" tabindex="-1"></a><span class="fu">tic</span>()</span>
-<span id="cb15-295"><a href="#cb15-295" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-296"><a href="#cb15-296" aria-hidden="true" tabindex="-1"></a>topic_category <span class="ot">&lt;-</span> topic_settings<span class="sc">$</span>topic_category[<span class="dv">1</span>]</span>
-<span id="cb15-297"><a href="#cb15-297" aria-hidden="true" tabindex="-1"></a>output_column  <span class="ot">&lt;-</span> topic_settings<span class="sc">$</span>output_column[<span class="dv">1</span>]</span>
-<span id="cb15-298"><a href="#cb15-298" aria-hidden="true" tabindex="-1"></a>system_text    <span class="ot">&lt;-</span> topic_settings<span class="sc">$</span>system_text[<span class="dv">1</span>]</span>
-<span id="cb15-299"><a href="#cb15-299" aria-hidden="true" tabindex="-1"></a>user_text      <span class="ot">&lt;-</span> topic_settings<span class="sc">$</span>user_text[<span class="dv">1</span>]</span>
-<span id="cb15-300"><a href="#cb15-300" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-301"><a href="#cb15-301" aria-hidden="true" tabindex="-1"></a>topic_dir <span class="ot">&lt;-</span> <span class="fu">file.path</span>(settings<span class="sc">$</span>out_dir, topic_category)</span>
+<span id="cb15-294"><a href="#cb15-294" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. RUN TOPIC FILTER (ROW 1 OF topic_settings)</span></span>
+<span id="cb15-295"><a href="#cb15-295" aria-hidden="true" tabindex="-1"></a><span class="co"># ===========================================================</span></span>
+<span id="cb15-296"><a href="#cb15-296" aria-hidden="true" tabindex="-1"></a><span class="fu">tic</span>()</span>
+<span id="cb15-297"><a href="#cb15-297" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-298"><a href="#cb15-298" aria-hidden="true" tabindex="-1"></a>topic_category <span class="ot">&lt;-</span> topic_settings<span class="sc">$</span>topic_category[<span class="dv">1</span>]</span>
+<span id="cb15-299"><a href="#cb15-299" aria-hidden="true" tabindex="-1"></a>output_column  <span class="ot">&lt;-</span> topic_settings<span class="sc">$</span>output_column[<span class="dv">1</span>]</span>
+<span id="cb15-300"><a href="#cb15-300" aria-hidden="true" tabindex="-1"></a>system_text    <span class="ot">&lt;-</span> topic_settings<span class="sc">$</span>system_text[<span class="dv">1</span>]</span>
+<span id="cb15-301"><a href="#cb15-301" aria-hidden="true" tabindex="-1"></a>user_text      <span class="ot">&lt;-</span> topic_settings<span class="sc">$</span>user_text[<span class="dv">1</span>]</span>
 <span id="cb15-302"><a href="#cb15-302" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-303"><a href="#cb15-303" aria-hidden="true" tabindex="-1"></a><span class="co"># ✅ CLEAN DIRECTORY (prevents duplicate chunk stacking)</span></span>
-<span id="cb15-304"><a href="#cb15-304" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">dir.exists</span>(topic_dir)) <span class="fu">unlink</span>(topic_dir, <span class="at">recursive =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb15-305"><a href="#cb15-305" aria-hidden="true" tabindex="-1"></a><span class="fu">dir.create</span>(topic_dir, <span class="at">recursive =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb15-306"><a href="#cb15-306" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-307"><a href="#cb15-307" aria-hidden="true" tabindex="-1"></a>chunks <span class="ot">&lt;-</span> <span class="fu">split</span>(data_pubs,</span>
-<span id="cb15-308"><a href="#cb15-308" aria-hidden="true" tabindex="-1"></a>                <span class="fu">ceiling</span>(<span class="fu">seq_len</span>(<span class="fu">nrow</span>(data_pubs)) <span class="sc">/</span> settings<span class="sc">$</span>chunk_size))</span>
-<span id="cb15-309"><a href="#cb15-309" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-310"><a href="#cb15-310" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="fu">seq_along</span>(chunks)) {</span>
-<span id="cb15-311"><a href="#cb15-311" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb15-312"><a href="#cb15-312" aria-hidden="true" tabindex="-1"></a>  <span class="fu">message</span>(<span class="st">&quot;Processing &quot;</span>, topic_category, <span class="st">&quot; | Chunk &quot;</span>, i)</span>
+<span id="cb15-303"><a href="#cb15-303" aria-hidden="true" tabindex="-1"></a>topic_dir <span class="ot">&lt;-</span> <span class="fu">file.path</span>(settings<span class="sc">$</span>out_dir, topic_category)</span>
+<span id="cb15-304"><a href="#cb15-304" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-305"><a href="#cb15-305" aria-hidden="true" tabindex="-1"></a><span class="co"># ✅ CLEAN DIRECTORY (prevents duplicate chunk stacking)</span></span>
+<span id="cb15-306"><a href="#cb15-306" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">dir.exists</span>(topic_dir)) <span class="fu">unlink</span>(topic_dir, <span class="at">recursive =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb15-307"><a href="#cb15-307" aria-hidden="true" tabindex="-1"></a><span class="fu">dir.create</span>(topic_dir, <span class="at">recursive =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb15-308"><a href="#cb15-308" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-309"><a href="#cb15-309" aria-hidden="true" tabindex="-1"></a>chunks <span class="ot">&lt;-</span> <span class="fu">split</span>(data_pubs,</span>
+<span id="cb15-310"><a href="#cb15-310" aria-hidden="true" tabindex="-1"></a>                <span class="fu">ceiling</span>(<span class="fu">seq_len</span>(<span class="fu">nrow</span>(data_pubs)) <span class="sc">/</span> settings<span class="sc">$</span>chunk_size))</span>
+<span id="cb15-311"><a href="#cb15-311" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-312"><a href="#cb15-312" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="fu">seq_along</span>(chunks)) {</span>
 <span id="cb15-313"><a href="#cb15-313" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb15-314"><a href="#cb15-314" aria-hidden="true" tabindex="-1"></a>  result_vector <span class="ot">&lt;-</span> <span class="fu">f_ai_text_analysis</span>(</span>
-<span id="cb15-315"><a href="#cb15-315" aria-hidden="true" tabindex="-1"></a>    chunks[[i]]<span class="sc">$</span>title_abstract,</span>
-<span id="cb15-316"><a href="#cb15-316" aria-hidden="true" tabindex="-1"></a>    settings<span class="sc">$</span>model,</span>
-<span id="cb15-317"><a href="#cb15-317" aria-hidden="true" tabindex="-1"></a>    system_text,</span>
-<span id="cb15-318"><a href="#cb15-318" aria-hidden="true" tabindex="-1"></a>    user_text</span>
-<span id="cb15-319"><a href="#cb15-319" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb15-320"><a href="#cb15-320" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb15-321"><a href="#cb15-321" aria-hidden="true" tabindex="-1"></a>  chunks[[i]][[output_column]] <span class="ot">&lt;-</span> result_vector</span>
+<span id="cb15-314"><a href="#cb15-314" aria-hidden="true" tabindex="-1"></a>  <span class="fu">message</span>(<span class="st">&quot;Processing &quot;</span>, topic_category, <span class="st">&quot; | Chunk &quot;</span>, i)</span>
+<span id="cb15-315"><a href="#cb15-315" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb15-316"><a href="#cb15-316" aria-hidden="true" tabindex="-1"></a>  result_vector <span class="ot">&lt;-</span> <span class="fu">f_ai_text_analysis</span>(</span>
+<span id="cb15-317"><a href="#cb15-317" aria-hidden="true" tabindex="-1"></a>    chunks[[i]]<span class="sc">$</span>title_abstract,</span>
+<span id="cb15-318"><a href="#cb15-318" aria-hidden="true" tabindex="-1"></a>    settings<span class="sc">$</span>model,</span>
+<span id="cb15-319"><a href="#cb15-319" aria-hidden="true" tabindex="-1"></a>    system_text,</span>
+<span id="cb15-320"><a href="#cb15-320" aria-hidden="true" tabindex="-1"></a>    user_text</span>
+<span id="cb15-321"><a href="#cb15-321" aria-hidden="true" tabindex="-1"></a>  )</span>
 <span id="cb15-322"><a href="#cb15-322" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb15-323"><a href="#cb15-323" aria-hidden="true" tabindex="-1"></a>  <span class="fu">saveRDS</span>(</span>
-<span id="cb15-324"><a href="#cb15-324" aria-hidden="true" tabindex="-1"></a>    chunks[[i]],</span>
-<span id="cb15-325"><a href="#cb15-325" aria-hidden="true" tabindex="-1"></a>    <span class="at">file =</span> <span class="fu">file.path</span>(topic_dir, <span class="fu">paste0</span>(topic_category, <span class="st">&quot;_chunk_&quot;</span>, i, <span class="st">&quot;.rds&quot;</span>))</span>
-<span id="cb15-326"><a href="#cb15-326" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb15-327"><a href="#cb15-327" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb15-328"><a href="#cb15-328" aria-hidden="true" tabindex="-1"></a>  <span class="co"># ✅ MEMORY CLEANING</span></span>
-<span id="cb15-329"><a href="#cb15-329" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rm</span>(result_vector)</span>
-<span id="cb15-330"><a href="#cb15-330" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gc</span>()</span>
-<span id="cb15-331"><a href="#cb15-331" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb15-332"><a href="#cb15-332" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-333"><a href="#cb15-333" aria-hidden="true" tabindex="-1"></a><span class="co"># ✅ FREE CHUNKS FROM MEMORY</span></span>
-<span id="cb15-334"><a href="#cb15-334" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(chunks)</span>
-<span id="cb15-335"><a href="#cb15-335" aria-hidden="true" tabindex="-1"></a><span class="fu">gc</span>()</span>
-<span id="cb15-336"><a href="#cb15-336" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-337"><a href="#cb15-337" aria-hidden="true" tabindex="-1"></a><span class="co"># ✅ LOAD ONLY chunk files</span></span>
-<span id="cb15-338"><a href="#cb15-338" aria-hidden="true" tabindex="-1"></a>files <span class="ot">&lt;-</span> <span class="fu">list.files</span>(topic_dir, <span class="at">full.names =</span> <span class="cn">TRUE</span>, <span class="at">pattern =</span> <span class="st">&quot;</span><span class="sc">\\</span><span class="st">.rds$&quot;</span>)</span>
-<span id="cb15-339"><a href="#cb15-339" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-340"><a href="#cb15-340" aria-hidden="true" tabindex="-1"></a>on_topic_final <span class="ot">&lt;-</span> purrr<span class="sc">::</span><span class="fu">map_dfr</span>(files, readRDS) <span class="sc">%&gt;%</span></span>
-<span id="cb15-341"><a href="#cb15-341" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>(eid, <span class="at">.keep_all =</span> <span class="cn">TRUE</span>)   <span class="co"># ✅ safeguard against duplication</span></span>
-<span id="cb15-342"><a href="#cb15-342" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-343"><a href="#cb15-343" aria-hidden="true" tabindex="-1"></a><span class="co"># ✅ CLEAN TEMP OBJECTS</span></span>
-<span id="cb15-344"><a href="#cb15-344" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(files)</span>
-<span id="cb15-345"><a href="#cb15-345" aria-hidden="true" tabindex="-1"></a><span class="fu">gc</span>()</span>
-<span id="cb15-346"><a href="#cb15-346" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-347"><a href="#cb15-347" aria-hidden="true" tabindex="-1"></a><span class="fu">saveRDS</span>(</span>
-<span id="cb15-348"><a href="#cb15-348" aria-hidden="true" tabindex="-1"></a>  on_topic_final,</span>
-<span id="cb15-349"><a href="#cb15-349" aria-hidden="true" tabindex="-1"></a>  <span class="at">file =</span> <span class="fu">file.path</span>(topic_dir, <span class="fu">paste0</span>(topic_category, <span class="st">&quot;_final_results.rds&quot;</span>))</span>
-<span id="cb15-350"><a href="#cb15-350" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb15-351"><a href="#cb15-351" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-352"><a href="#cb15-352" aria-hidden="true" tabindex="-1"></a><span class="fu">toc</span>()</span>
+<span id="cb15-323"><a href="#cb15-323" aria-hidden="true" tabindex="-1"></a>  chunks[[i]][[output_column]] <span class="ot">&lt;-</span> result_vector</span>
+<span id="cb15-324"><a href="#cb15-324" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb15-325"><a href="#cb15-325" aria-hidden="true" tabindex="-1"></a>  <span class="fu">saveRDS</span>(</span>
+<span id="cb15-326"><a href="#cb15-326" aria-hidden="true" tabindex="-1"></a>    chunks[[i]],</span>
+<span id="cb15-327"><a href="#cb15-327" aria-hidden="true" tabindex="-1"></a>    <span class="at">file =</span> <span class="fu">file.path</span>(topic_dir, <span class="fu">paste0</span>(topic_category, <span class="st">&quot;_chunk_&quot;</span>, i, <span class="st">&quot;.rds&quot;</span>))</span>
+<span id="cb15-328"><a href="#cb15-328" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb15-329"><a href="#cb15-329" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb15-330"><a href="#cb15-330" aria-hidden="true" tabindex="-1"></a>  <span class="co"># ✅ MEMORY CLEANING</span></span>
+<span id="cb15-331"><a href="#cb15-331" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rm</span>(result_vector)</span>
+<span id="cb15-332"><a href="#cb15-332" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gc</span>()</span>
+<span id="cb15-333"><a href="#cb15-333" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb15-334"><a href="#cb15-334" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-335"><a href="#cb15-335" aria-hidden="true" tabindex="-1"></a><span class="co"># ✅ FREE CHUNKS FROM MEMORY</span></span>
+<span id="cb15-336"><a href="#cb15-336" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(chunks)</span>
+<span id="cb15-337"><a href="#cb15-337" aria-hidden="true" tabindex="-1"></a><span class="fu">gc</span>()</span>
+<span id="cb15-338"><a href="#cb15-338" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-339"><a href="#cb15-339" aria-hidden="true" tabindex="-1"></a><span class="co"># ✅ LOAD ONLY chunk files</span></span>
+<span id="cb15-340"><a href="#cb15-340" aria-hidden="true" tabindex="-1"></a>files <span class="ot">&lt;-</span> <span class="fu">list.files</span>(topic_dir, <span class="at">full.names =</span> <span class="cn">TRUE</span>, <span class="at">pattern =</span> <span class="st">&quot;</span><span class="sc">\\</span><span class="st">.rds$&quot;</span>)</span>
+<span id="cb15-341"><a href="#cb15-341" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-342"><a href="#cb15-342" aria-hidden="true" tabindex="-1"></a>on_topic_final <span class="ot">&lt;-</span> purrr<span class="sc">::</span><span class="fu">map_dfr</span>(files, readRDS) <span class="sc">%&gt;%</span></span>
+<span id="cb15-343"><a href="#cb15-343" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>(eid, <span class="at">.keep_all =</span> <span class="cn">TRUE</span>)   <span class="co"># ✅ safeguard against duplication</span></span>
+<span id="cb15-344"><a href="#cb15-344" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-345"><a href="#cb15-345" aria-hidden="true" tabindex="-1"></a><span class="co"># ✅ CLEAN TEMP OBJECTS</span></span>
+<span id="cb15-346"><a href="#cb15-346" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(files)</span>
+<span id="cb15-347"><a href="#cb15-347" aria-hidden="true" tabindex="-1"></a><span class="fu">gc</span>()</span>
+<span id="cb15-348"><a href="#cb15-348" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-349"><a href="#cb15-349" aria-hidden="true" tabindex="-1"></a><span class="fu">saveRDS</span>(</span>
+<span id="cb15-350"><a href="#cb15-350" aria-hidden="true" tabindex="-1"></a>  on_topic_final,</span>
+<span id="cb15-351"><a href="#cb15-351" aria-hidden="true" tabindex="-1"></a>  <span class="at">file =</span> <span class="fu">file.path</span>(topic_dir, <span class="fu">paste0</span>(topic_category, <span class="st">&quot;_final_results.rds&quot;</span>))</span>
+<span id="cb15-352"><a href="#cb15-352" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb15-353"><a href="#cb15-353" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-354"><a href="#cb15-354" aria-hidden="true" tabindex="-1"></a><span class="co"># -------------------------------</span></span>
-<span id="cb15-355"><a href="#cb15-355" aria-hidden="true" tabindex="-1"></a><span class="co"># FILTER ON-TOPIC (GENERALIZED)</span></span>
+<span id="cb15-354"><a href="#cb15-354" aria-hidden="true" tabindex="-1"></a><span class="fu">toc</span>()</span>
+<span id="cb15-355"><a href="#cb15-355" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-356"><a href="#cb15-356" aria-hidden="true" tabindex="-1"></a><span class="co"># -------------------------------</span></span>
-<span id="cb15-357"><a href="#cb15-357" aria-hidden="true" tabindex="-1"></a>on_topic_pubs <span class="ot">&lt;-</span> on_topic_final <span class="sc">%&gt;%</span></span>
-<span id="cb15-358"><a href="#cb15-358" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(stringr<span class="sc">::</span><span class="fu">str_detect</span>(</span>
-<span id="cb15-359"><a href="#cb15-359" aria-hidden="true" tabindex="-1"></a>    <span class="fu">tolower</span>(.data[[settings<span class="sc">$</span>on_topic_column]]),</span>
-<span id="cb15-360"><a href="#cb15-360" aria-hidden="true" tabindex="-1"></a>    settings<span class="sc">$</span>on_topic_pattern</span>
-<span id="cb15-361"><a href="#cb15-361" aria-hidden="true" tabindex="-1"></a>  ))</span>
-<span id="cb15-362"><a href="#cb15-362" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-363"><a href="#cb15-363" aria-hidden="true" tabindex="-1"></a><span class="co"># ✅ CLEAN UNUSED OBJECT</span></span>
-<span id="cb15-364"><a href="#cb15-364" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(on_topic_final)</span>
-<span id="cb15-365"><a href="#cb15-365" aria-hidden="true" tabindex="-1"></a><span class="fu">gc</span>()</span>
-<span id="cb15-366"><a href="#cb15-366" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-367"><a href="#cb15-367" aria-hidden="true" tabindex="-1"></a><span class="co"># ===========================================================</span></span>
-<span id="cb15-368"><a href="#cb15-368" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. RUN REMAINING AI TASKS</span></span>
+<span id="cb15-357"><a href="#cb15-357" aria-hidden="true" tabindex="-1"></a><span class="co"># FILTER ON-TOPIC (GENERALIZED)</span></span>
+<span id="cb15-358"><a href="#cb15-358" aria-hidden="true" tabindex="-1"></a><span class="co"># -------------------------------</span></span>
+<span id="cb15-359"><a href="#cb15-359" aria-hidden="true" tabindex="-1"></a>on_topic_pubs <span class="ot">&lt;-</span> on_topic_final <span class="sc">%&gt;%</span></span>
+<span id="cb15-360"><a href="#cb15-360" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(stringr<span class="sc">::</span><span class="fu">str_detect</span>(</span>
+<span id="cb15-361"><a href="#cb15-361" aria-hidden="true" tabindex="-1"></a>    <span class="fu">tolower</span>(.data[[settings<span class="sc">$</span>on_topic_column]]),</span>
+<span id="cb15-362"><a href="#cb15-362" aria-hidden="true" tabindex="-1"></a>    settings<span class="sc">$</span>on_topic_pattern</span>
+<span id="cb15-363"><a href="#cb15-363" aria-hidden="true" tabindex="-1"></a>  ))</span>
+<span id="cb15-364"><a href="#cb15-364" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-365"><a href="#cb15-365" aria-hidden="true" tabindex="-1"></a><span class="co"># ✅ CLEAN UNUSED OBJECT</span></span>
+<span id="cb15-366"><a href="#cb15-366" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(on_topic_final)</span>
+<span id="cb15-367"><a href="#cb15-367" aria-hidden="true" tabindex="-1"></a><span class="fu">gc</span>()</span>
+<span id="cb15-368"><a href="#cb15-368" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-369"><a href="#cb15-369" aria-hidden="true" tabindex="-1"></a><span class="co"># ===========================================================</span></span>
-<span id="cb15-370"><a href="#cb15-370" aria-hidden="true" tabindex="-1"></a><span class="fu">tic</span>()</span>
-<span id="cb15-371"><a href="#cb15-371" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-372"><a href="#cb15-372" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (j <span class="cf">in</span> <span class="dv">2</span><span class="sc">:</span><span class="fu">nrow</span>(topic_settings)) {</span>
-<span id="cb15-373"><a href="#cb15-373" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb15-374"><a href="#cb15-374" aria-hidden="true" tabindex="-1"></a>  topic_category <span class="ot">&lt;-</span> topic_settings<span class="sc">$</span>topic_category[j]</span>
-<span id="cb15-375"><a href="#cb15-375" aria-hidden="true" tabindex="-1"></a>  output_column  <span class="ot">&lt;-</span> topic_settings<span class="sc">$</span>output_column[j]</span>
-<span id="cb15-376"><a href="#cb15-376" aria-hidden="true" tabindex="-1"></a>  system_text    <span class="ot">&lt;-</span> topic_settings<span class="sc">$</span>system_text[j]</span>
-<span id="cb15-377"><a href="#cb15-377" aria-hidden="true" tabindex="-1"></a>  user_text      <span class="ot">&lt;-</span> topic_settings<span class="sc">$</span>user_text[j]</span>
-<span id="cb15-378"><a href="#cb15-378" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb15-379"><a href="#cb15-379" aria-hidden="true" tabindex="-1"></a>  topic_dir <span class="ot">&lt;-</span> <span class="fu">file.path</span>(settings<span class="sc">$</span>out_dir, topic_category)</span>
+<span id="cb15-370"><a href="#cb15-370" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. RUN REMAINING AI TASKS</span></span>
+<span id="cb15-371"><a href="#cb15-371" aria-hidden="true" tabindex="-1"></a><span class="co"># ===========================================================</span></span>
+<span id="cb15-372"><a href="#cb15-372" aria-hidden="true" tabindex="-1"></a><span class="fu">tic</span>()</span>
+<span id="cb15-373"><a href="#cb15-373" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-374"><a href="#cb15-374" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (j <span class="cf">in</span> <span class="dv">2</span><span class="sc">:</span><span class="fu">nrow</span>(topic_settings)) {</span>
+<span id="cb15-375"><a href="#cb15-375" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb15-376"><a href="#cb15-376" aria-hidden="true" tabindex="-1"></a>  topic_category <span class="ot">&lt;-</span> topic_settings<span class="sc">$</span>topic_category[j]</span>
+<span id="cb15-377"><a href="#cb15-377" aria-hidden="true" tabindex="-1"></a>  output_column  <span class="ot">&lt;-</span> topic_settings<span class="sc">$</span>output_column[j]</span>
+<span id="cb15-378"><a href="#cb15-378" aria-hidden="true" tabindex="-1"></a>  system_text    <span class="ot">&lt;-</span> topic_settings<span class="sc">$</span>system_text[j]</span>
+<span id="cb15-379"><a href="#cb15-379" aria-hidden="true" tabindex="-1"></a>  user_text      <span class="ot">&lt;-</span> topic_settings<span class="sc">$</span>user_text[j]</span>
 <span id="cb15-380"><a href="#cb15-380" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb15-381"><a href="#cb15-381" aria-hidden="true" tabindex="-1"></a>  <span class="co"># ✅ CLEAN DIRECTORY BEFORE RUN</span></span>
-<span id="cb15-382"><a href="#cb15-382" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">dir.exists</span>(topic_dir)) <span class="fu">unlink</span>(topic_dir, <span class="at">recursive =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb15-383"><a href="#cb15-383" aria-hidden="true" tabindex="-1"></a>  <span class="fu">dir.create</span>(topic_dir, <span class="at">recursive =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb15-384"><a href="#cb15-384" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb15-385"><a href="#cb15-385" aria-hidden="true" tabindex="-1"></a>  chunks <span class="ot">&lt;-</span> <span class="fu">split</span>(on_topic_pubs,</span>
-<span id="cb15-386"><a href="#cb15-386" aria-hidden="true" tabindex="-1"></a>                  <span class="fu">ceiling</span>(<span class="fu">seq_len</span>(<span class="fu">nrow</span>(on_topic_pubs)) <span class="sc">/</span> settings<span class="sc">$</span>chunk_size))</span>
-<span id="cb15-387"><a href="#cb15-387" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb15-388"><a href="#cb15-388" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (i <span class="cf">in</span> <span class="fu">seq_along</span>(chunks)) {</span>
-<span id="cb15-389"><a href="#cb15-389" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb15-390"><a href="#cb15-390" aria-hidden="true" tabindex="-1"></a>    <span class="fu">message</span>(<span class="st">&quot;Processing &quot;</span>, topic_category, <span class="st">&quot; | Chunk &quot;</span>, i)</span>
+<span id="cb15-381"><a href="#cb15-381" aria-hidden="true" tabindex="-1"></a>  topic_dir <span class="ot">&lt;-</span> <span class="fu">file.path</span>(settings<span class="sc">$</span>out_dir, topic_category)</span>
+<span id="cb15-382"><a href="#cb15-382" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb15-383"><a href="#cb15-383" aria-hidden="true" tabindex="-1"></a>  <span class="co"># ✅ CLEAN DIRECTORY BEFORE RUN</span></span>
+<span id="cb15-384"><a href="#cb15-384" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">dir.exists</span>(topic_dir)) <span class="fu">unlink</span>(topic_dir, <span class="at">recursive =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb15-385"><a href="#cb15-385" aria-hidden="true" tabindex="-1"></a>  <span class="fu">dir.create</span>(topic_dir, <span class="at">recursive =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb15-386"><a href="#cb15-386" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb15-387"><a href="#cb15-387" aria-hidden="true" tabindex="-1"></a>  chunks <span class="ot">&lt;-</span> <span class="fu">split</span>(on_topic_pubs,</span>
+<span id="cb15-388"><a href="#cb15-388" aria-hidden="true" tabindex="-1"></a>                  <span class="fu">ceiling</span>(<span class="fu">seq_len</span>(<span class="fu">nrow</span>(on_topic_pubs)) <span class="sc">/</span> settings<span class="sc">$</span>chunk_size))</span>
+<span id="cb15-389"><a href="#cb15-389" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb15-390"><a href="#cb15-390" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (i <span class="cf">in</span> <span class="fu">seq_along</span>(chunks)) {</span>
 <span id="cb15-391"><a href="#cb15-391" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb15-392"><a href="#cb15-392" aria-hidden="true" tabindex="-1"></a>    result_vector <span class="ot">&lt;-</span> <span class="fu">f_ai_text_analysis</span>(</span>
-<span id="cb15-393"><a href="#cb15-393" aria-hidden="true" tabindex="-1"></a>      chunks[[i]]<span class="sc">$</span>title_abstract,</span>
-<span id="cb15-394"><a href="#cb15-394" aria-hidden="true" tabindex="-1"></a>      settings<span class="sc">$</span>model,</span>
-<span id="cb15-395"><a href="#cb15-395" aria-hidden="true" tabindex="-1"></a>      system_text,</span>
-<span id="cb15-396"><a href="#cb15-396" aria-hidden="true" tabindex="-1"></a>      user_text</span>
-<span id="cb15-397"><a href="#cb15-397" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb15-398"><a href="#cb15-398" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb15-399"><a href="#cb15-399" aria-hidden="true" tabindex="-1"></a>    chunks[[i]][[output_column]] <span class="ot">&lt;-</span> result_vector</span>
+<span id="cb15-392"><a href="#cb15-392" aria-hidden="true" tabindex="-1"></a>    <span class="fu">message</span>(<span class="st">&quot;Processing &quot;</span>, topic_category, <span class="st">&quot; | Chunk &quot;</span>, i)</span>
+<span id="cb15-393"><a href="#cb15-393" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-394"><a href="#cb15-394" aria-hidden="true" tabindex="-1"></a>    result_vector <span class="ot">&lt;-</span> <span class="fu">f_ai_text_analysis</span>(</span>
+<span id="cb15-395"><a href="#cb15-395" aria-hidden="true" tabindex="-1"></a>      chunks[[i]]<span class="sc">$</span>title_abstract,</span>
+<span id="cb15-396"><a href="#cb15-396" aria-hidden="true" tabindex="-1"></a>      settings<span class="sc">$</span>model,</span>
+<span id="cb15-397"><a href="#cb15-397" aria-hidden="true" tabindex="-1"></a>      system_text,</span>
+<span id="cb15-398"><a href="#cb15-398" aria-hidden="true" tabindex="-1"></a>      user_text</span>
+<span id="cb15-399"><a href="#cb15-399" aria-hidden="true" tabindex="-1"></a>    )</span>
 <span id="cb15-400"><a href="#cb15-400" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb15-401"><a href="#cb15-401" aria-hidden="true" tabindex="-1"></a>    <span class="fu">saveRDS</span>(</span>
-<span id="cb15-402"><a href="#cb15-402" aria-hidden="true" tabindex="-1"></a>      chunks[[i]],</span>
-<span id="cb15-403"><a href="#cb15-403" aria-hidden="true" tabindex="-1"></a>      <span class="at">file =</span> <span class="fu">file.path</span>(topic_dir, <span class="fu">paste0</span>(topic_category, <span class="st">&quot;_chunk_&quot;</span>, i, <span class="st">&quot;.rds&quot;</span>))</span>
-<span id="cb15-404"><a href="#cb15-404" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb15-405"><a href="#cb15-405" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb15-406"><a href="#cb15-406" aria-hidden="true" tabindex="-1"></a>    <span class="co"># ✅ MEMORY CLEANING (critical)</span></span>
-<span id="cb15-407"><a href="#cb15-407" aria-hidden="true" tabindex="-1"></a>    <span class="fu">rm</span>(result_vector)</span>
-<span id="cb15-408"><a href="#cb15-408" aria-hidden="true" tabindex="-1"></a>    <span class="fu">gc</span>()</span>
-<span id="cb15-409"><a href="#cb15-409" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb15-410"><a href="#cb15-410" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb15-411"><a href="#cb15-411" aria-hidden="true" tabindex="-1"></a>  <span class="co"># ✅ REMOVE CHUNKS FROM MEMORY</span></span>
-<span id="cb15-412"><a href="#cb15-412" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rm</span>(chunks)</span>
-<span id="cb15-413"><a href="#cb15-413" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gc</span>()</span>
-<span id="cb15-414"><a href="#cb15-414" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb15-415"><a href="#cb15-415" aria-hidden="true" tabindex="-1"></a>  files <span class="ot">&lt;-</span> <span class="fu">list.files</span>(topic_dir, <span class="at">full.names =</span> <span class="cn">TRUE</span>, <span class="at">pattern =</span> <span class="st">&quot;</span><span class="sc">\\</span><span class="st">.rds$&quot;</span>)</span>
+<span id="cb15-401"><a href="#cb15-401" aria-hidden="true" tabindex="-1"></a>    chunks[[i]][[output_column]] <span class="ot">&lt;-</span> result_vector</span>
+<span id="cb15-402"><a href="#cb15-402" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-403"><a href="#cb15-403" aria-hidden="true" tabindex="-1"></a>    <span class="fu">saveRDS</span>(</span>
+<span id="cb15-404"><a href="#cb15-404" aria-hidden="true" tabindex="-1"></a>      chunks[[i]],</span>
+<span id="cb15-405"><a href="#cb15-405" aria-hidden="true" tabindex="-1"></a>      <span class="at">file =</span> <span class="fu">file.path</span>(topic_dir, <span class="fu">paste0</span>(topic_category, <span class="st">&quot;_chunk_&quot;</span>, i, <span class="st">&quot;.rds&quot;</span>))</span>
+<span id="cb15-406"><a href="#cb15-406" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb15-407"><a href="#cb15-407" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-408"><a href="#cb15-408" aria-hidden="true" tabindex="-1"></a>    <span class="co"># ✅ MEMORY CLEANING (critical)</span></span>
+<span id="cb15-409"><a href="#cb15-409" aria-hidden="true" tabindex="-1"></a>    <span class="fu">rm</span>(result_vector)</span>
+<span id="cb15-410"><a href="#cb15-410" aria-hidden="true" tabindex="-1"></a>    <span class="fu">gc</span>()</span>
+<span id="cb15-411"><a href="#cb15-411" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb15-412"><a href="#cb15-412" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb15-413"><a href="#cb15-413" aria-hidden="true" tabindex="-1"></a>  <span class="co"># ✅ REMOVE CHUNKS FROM MEMORY</span></span>
+<span id="cb15-414"><a href="#cb15-414" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rm</span>(chunks)</span>
+<span id="cb15-415"><a href="#cb15-415" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gc</span>()</span>
 <span id="cb15-416"><a href="#cb15-416" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb15-417"><a href="#cb15-417" aria-hidden="true" tabindex="-1"></a>  final_df <span class="ot">&lt;-</span> purrr<span class="sc">::</span><span class="fu">map_dfr</span>(files, readRDS) <span class="sc">%&gt;%</span></span>
-<span id="cb15-418"><a href="#cb15-418" aria-hidden="true" tabindex="-1"></a>    <span class="fu">distinct</span>(eid, <span class="at">.keep_all =</span> <span class="cn">TRUE</span>)  <span class="co"># ✅ safeguard</span></span>
-<span id="cb15-419"><a href="#cb15-419" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb15-420"><a href="#cb15-420" aria-hidden="true" tabindex="-1"></a>  <span class="co"># ✅ CLEAN FILE LIST</span></span>
-<span id="cb15-421"><a href="#cb15-421" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rm</span>(files)</span>
-<span id="cb15-422"><a href="#cb15-422" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gc</span>()</span>
-<span id="cb15-423"><a href="#cb15-423" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb15-424"><a href="#cb15-424" aria-hidden="true" tabindex="-1"></a>  <span class="fu">saveRDS</span>(</span>
-<span id="cb15-425"><a href="#cb15-425" aria-hidden="true" tabindex="-1"></a>    final_df,</span>
-<span id="cb15-426"><a href="#cb15-426" aria-hidden="true" tabindex="-1"></a>    <span class="at">file =</span> <span class="fu">file.path</span>(topic_dir, <span class="fu">paste0</span>(topic_category, <span class="st">&quot;_final_results.rds&quot;</span>))</span>
-<span id="cb15-427"><a href="#cb15-427" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb15-428"><a href="#cb15-428" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb15-429"><a href="#cb15-429" aria-hidden="true" tabindex="-1"></a>  <span class="co"># ✅ FREE MEMORY BEFORE NEXT LOOP</span></span>
-<span id="cb15-430"><a href="#cb15-430" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rm</span>(final_df)</span>
-<span id="cb15-431"><a href="#cb15-431" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gc</span>()</span>
-<span id="cb15-432"><a href="#cb15-432" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb15-433"><a href="#cb15-433" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-434"><a href="#cb15-434" aria-hidden="true" tabindex="-1"></a><span class="fu">toc</span>()</span>
+<span id="cb15-417"><a href="#cb15-417" aria-hidden="true" tabindex="-1"></a>  files <span class="ot">&lt;-</span> <span class="fu">list.files</span>(topic_dir, <span class="at">full.names =</span> <span class="cn">TRUE</span>, <span class="at">pattern =</span> <span class="st">&quot;</span><span class="sc">\\</span><span class="st">.rds$&quot;</span>)</span>
+<span id="cb15-418"><a href="#cb15-418" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb15-419"><a href="#cb15-419" aria-hidden="true" tabindex="-1"></a>  final_df <span class="ot">&lt;-</span> purrr<span class="sc">::</span><span class="fu">map_dfr</span>(files, readRDS) <span class="sc">%&gt;%</span></span>
+<span id="cb15-420"><a href="#cb15-420" aria-hidden="true" tabindex="-1"></a>    <span class="fu">distinct</span>(eid, <span class="at">.keep_all =</span> <span class="cn">TRUE</span>)  <span class="co"># ✅ safeguard</span></span>
+<span id="cb15-421"><a href="#cb15-421" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb15-422"><a href="#cb15-422" aria-hidden="true" tabindex="-1"></a>  <span class="co"># ✅ CLEAN FILE LIST</span></span>
+<span id="cb15-423"><a href="#cb15-423" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rm</span>(files)</span>
+<span id="cb15-424"><a href="#cb15-424" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gc</span>()</span>
+<span id="cb15-425"><a href="#cb15-425" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb15-426"><a href="#cb15-426" aria-hidden="true" tabindex="-1"></a>  <span class="fu">saveRDS</span>(</span>
+<span id="cb15-427"><a href="#cb15-427" aria-hidden="true" tabindex="-1"></a>    final_df,</span>
+<span id="cb15-428"><a href="#cb15-428" aria-hidden="true" tabindex="-1"></a>    <span class="at">file =</span> <span class="fu">file.path</span>(topic_dir, <span class="fu">paste0</span>(topic_category, <span class="st">&quot;_final_results.rds&quot;</span>))</span>
+<span id="cb15-429"><a href="#cb15-429" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb15-430"><a href="#cb15-430" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb15-431"><a href="#cb15-431" aria-hidden="true" tabindex="-1"></a>  <span class="co"># ✅ FREE MEMORY BEFORE NEXT LOOP</span></span>
+<span id="cb15-432"><a href="#cb15-432" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rm</span>(final_df)</span>
+<span id="cb15-433"><a href="#cb15-433" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gc</span>()</span>
+<span id="cb15-434"><a href="#cb15-434" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb15-435"><a href="#cb15-435" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-436"><a href="#cb15-436" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb15-436"><a href="#cb15-436" aria-hidden="true" tabindex="-1"></a><span class="fu">toc</span>()</span>
 <span id="cb15-437"><a href="#cb15-437" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-438"><a href="#cb15-438" aria-hidden="true" tabindex="-1"></a>After you run the ai recovery the data is stored for each chunk in separate folders for each topic and needs to be combined into a master file that stores the topic outputs described in the prompt and the original data. This code should work no matter how many prompt topics you are running. The script here takes about 5 minutes. An example script is also here: &quot;AI biosecurity workshop generalized.R&quot;.</span>
+<span id="cb15-438"><a href="#cb15-438" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb15-439"><a href="#cb15-439" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-440"><a href="#cb15-440" aria-hidden="true" tabindex="-1"></a><span class="in">```{r combine ai chunks}</span></span>
-<span id="cb15-441"><a href="#cb15-441" aria-hidden="true" tabindex="-1"></a><span class="co"># ===========================================================</span></span>
-<span id="cb15-442"><a href="#cb15-442" aria-hidden="true" tabindex="-1"></a><span class="co"># MERGE AI RESULTS </span></span>
+<span id="cb15-440"><a href="#cb15-440" aria-hidden="true" tabindex="-1"></a>After you run the ai recovery the data is stored for each chunk in separate folders for each topic and needs to be combined into a master file that stores the topic outputs described in the prompt and the original data. This code should work no matter how many prompt topics you are running. The script here takes about 5 minutes. An example script is also here: &quot;AI biosecurity workshop generalized.R&quot;.</span>
+<span id="cb15-441"><a href="#cb15-441" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-442"><a href="#cb15-442" aria-hidden="true" tabindex="-1"></a><span class="in">```{r combine ai chunks}</span></span>
 <span id="cb15-443"><a href="#cb15-443" aria-hidden="true" tabindex="-1"></a><span class="co"># ===========================================================</span></span>
-<span id="cb15-444"><a href="#cb15-444" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-445"><a href="#cb15-445" aria-hidden="true" tabindex="-1"></a>merge_ai_results <span class="ot">&lt;-</span> <span class="cf">function</span>(topic_settings, out_dir, <span class="at">join_col =</span> <span class="st">&quot;eid&quot;</span>) {</span>
-<span id="cb15-446"><a href="#cb15-446" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb15-447"><a href="#cb15-447" aria-hidden="true" tabindex="-1"></a>  results_list <span class="ot">&lt;-</span> purrr<span class="sc">::</span><span class="fu">pmap</span>(</span>
-<span id="cb15-448"><a href="#cb15-448" aria-hidden="true" tabindex="-1"></a>    topic_settings,</span>
-<span id="cb15-449"><a href="#cb15-449" aria-hidden="true" tabindex="-1"></a>    <span class="cf">function</span>(topic_category, output_column, system_text, user_text) {</span>
-<span id="cb15-450"><a href="#cb15-450" aria-hidden="true" tabindex="-1"></a>      </span>
-<span id="cb15-451"><a href="#cb15-451" aria-hidden="true" tabindex="-1"></a>      results_file <span class="ot">&lt;-</span> <span class="fu">file.path</span>(</span>
-<span id="cb15-452"><a href="#cb15-452" aria-hidden="true" tabindex="-1"></a>        out_dir,</span>
-<span id="cb15-453"><a href="#cb15-453" aria-hidden="true" tabindex="-1"></a>        topic_category,</span>
-<span id="cb15-454"><a href="#cb15-454" aria-hidden="true" tabindex="-1"></a>        <span class="fu">paste0</span>(topic_category, <span class="st">&quot;_final_results.rds&quot;</span>)</span>
-<span id="cb15-455"><a href="#cb15-455" aria-hidden="true" tabindex="-1"></a>      )</span>
-<span id="cb15-456"><a href="#cb15-456" aria-hidden="true" tabindex="-1"></a>      </span>
-<span id="cb15-457"><a href="#cb15-457" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (<span class="sc">!</span><span class="fu">file.exists</span>(results_file)) <span class="fu">return</span>(<span class="cn">NULL</span>)</span>
+<span id="cb15-444"><a href="#cb15-444" aria-hidden="true" tabindex="-1"></a><span class="co"># MERGE AI RESULTS </span></span>
+<span id="cb15-445"><a href="#cb15-445" aria-hidden="true" tabindex="-1"></a><span class="co"># ===========================================================</span></span>
+<span id="cb15-446"><a href="#cb15-446" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-447"><a href="#cb15-447" aria-hidden="true" tabindex="-1"></a>merge_ai_results <span class="ot">&lt;-</span> <span class="cf">function</span>(topic_settings, out_dir, <span class="at">join_col =</span> <span class="st">&quot;eid&quot;</span>) {</span>
+<span id="cb15-448"><a href="#cb15-448" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb15-449"><a href="#cb15-449" aria-hidden="true" tabindex="-1"></a>  results_list <span class="ot">&lt;-</span> purrr<span class="sc">::</span><span class="fu">pmap</span>(</span>
+<span id="cb15-450"><a href="#cb15-450" aria-hidden="true" tabindex="-1"></a>    topic_settings,</span>
+<span id="cb15-451"><a href="#cb15-451" aria-hidden="true" tabindex="-1"></a>    <span class="cf">function</span>(topic_category, output_column, system_text, user_text) {</span>
+<span id="cb15-452"><a href="#cb15-452" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb15-453"><a href="#cb15-453" aria-hidden="true" tabindex="-1"></a>      results_file <span class="ot">&lt;-</span> <span class="fu">file.path</span>(</span>
+<span id="cb15-454"><a href="#cb15-454" aria-hidden="true" tabindex="-1"></a>        out_dir,</span>
+<span id="cb15-455"><a href="#cb15-455" aria-hidden="true" tabindex="-1"></a>        topic_category,</span>
+<span id="cb15-456"><a href="#cb15-456" aria-hidden="true" tabindex="-1"></a>        <span class="fu">paste0</span>(topic_category, <span class="st">&quot;_final_results.rds&quot;</span>)</span>
+<span id="cb15-457"><a href="#cb15-457" aria-hidden="true" tabindex="-1"></a>      )</span>
 <span id="cb15-458"><a href="#cb15-458" aria-hidden="true" tabindex="-1"></a>      </span>
-<span id="cb15-459"><a href="#cb15-459" aria-hidden="true" tabindex="-1"></a>      <span class="fu">readRDS</span>(results_file) <span class="sc">%&gt;%</span></span>
-<span id="cb15-460"><a href="#cb15-460" aria-hidden="true" tabindex="-1"></a>        <span class="fu">distinct</span>(.data[[join_col]], <span class="at">.keep_all =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb15-461"><a href="#cb15-461" aria-hidden="true" tabindex="-1"></a>        <span class="fu">select</span>(<span class="fu">all_of</span>(<span class="fu">c</span>(join_col, output_column)))</span>
-<span id="cb15-462"><a href="#cb15-462" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb15-463"><a href="#cb15-463" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb15-464"><a href="#cb15-464" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb15-465"><a href="#cb15-465" aria-hidden="true" tabindex="-1"></a>  purrr<span class="sc">::</span><span class="fu">compact</span>(results_list)</span>
-<span id="cb15-466"><a href="#cb15-466" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb15-467"><a href="#cb15-467" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-468"><a href="#cb15-468" aria-hidden="true" tabindex="-1"></a>ai_results <span class="ot">&lt;-</span> <span class="fu">merge_ai_results</span>(topic_settings, settings<span class="sc">$</span>out_dir)</span>
+<span id="cb15-459"><a href="#cb15-459" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (<span class="sc">!</span><span class="fu">file.exists</span>(results_file)) <span class="fu">return</span>(<span class="cn">NULL</span>)</span>
+<span id="cb15-460"><a href="#cb15-460" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb15-461"><a href="#cb15-461" aria-hidden="true" tabindex="-1"></a>      <span class="fu">readRDS</span>(results_file) <span class="sc">%&gt;%</span></span>
+<span id="cb15-462"><a href="#cb15-462" aria-hidden="true" tabindex="-1"></a>        <span class="fu">distinct</span>(.data[[join_col]], <span class="at">.keep_all =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb15-463"><a href="#cb15-463" aria-hidden="true" tabindex="-1"></a>        <span class="fu">select</span>(<span class="fu">all_of</span>(<span class="fu">c</span>(join_col, output_column)))</span>
+<span id="cb15-464"><a href="#cb15-464" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb15-465"><a href="#cb15-465" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb15-466"><a href="#cb15-466" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb15-467"><a href="#cb15-467" aria-hidden="true" tabindex="-1"></a>  purrr<span class="sc">::</span><span class="fu">compact</span>(results_list)</span>
+<span id="cb15-468"><a href="#cb15-468" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb15-469"><a href="#cb15-469" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-470"><a href="#cb15-470" aria-hidden="true" tabindex="-1"></a>data_pubs_final <span class="ot">&lt;-</span> purrr<span class="sc">::</span><span class="fu">reduce</span>(</span>
-<span id="cb15-471"><a href="#cb15-471" aria-hidden="true" tabindex="-1"></a>  ai_results,</span>
-<span id="cb15-472"><a href="#cb15-472" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span>left_join,</span>
-<span id="cb15-473"><a href="#cb15-473" aria-hidden="true" tabindex="-1"></a>  <span class="at">by =</span> <span class="st">&quot;eid&quot;</span>,</span>
-<span id="cb15-474"><a href="#cb15-474" aria-hidden="true" tabindex="-1"></a>  <span class="at">.init =</span> data_pubs_all</span>
-<span id="cb15-475"><a href="#cb15-475" aria-hidden="true" tabindex="-1"></a>) <span class="sc">%&gt;%</span></span>
-<span id="cb15-476"><a href="#cb15-476" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>()</span>
-<span id="cb15-477"><a href="#cb15-477" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-478"><a href="#cb15-478" aria-hidden="true" tabindex="-1"></a><span class="fu">saveRDS</span>(data_pubs_final,</span>
-<span id="cb15-479"><a href="#cb15-479" aria-hidden="true" tabindex="-1"></a>        <span class="at">file =</span> <span class="fu">file.path</span>(settings<span class="sc">$</span>out_dir, <span class="st">&quot;data_pubs_final.rds&quot;</span>))</span>
-<span id="cb15-480"><a href="#cb15-480" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb15-481"><a href="#cb15-481" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-482"><a href="#cb15-482" aria-hidden="true" tabindex="-1"></a><span class="fu">## Recover GBIF standard taxonomy</span></span>
+<span id="cb15-470"><a href="#cb15-470" aria-hidden="true" tabindex="-1"></a>ai_results <span class="ot">&lt;-</span> <span class="fu">merge_ai_results</span>(topic_settings, settings<span class="sc">$</span>out_dir)</span>
+<span id="cb15-471"><a href="#cb15-471" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-472"><a href="#cb15-472" aria-hidden="true" tabindex="-1"></a>data_pubs_final <span class="ot">&lt;-</span> purrr<span class="sc">::</span><span class="fu">reduce</span>(</span>
+<span id="cb15-473"><a href="#cb15-473" aria-hidden="true" tabindex="-1"></a>  ai_results,</span>
+<span id="cb15-474"><a href="#cb15-474" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span>left_join,</span>
+<span id="cb15-475"><a href="#cb15-475" aria-hidden="true" tabindex="-1"></a>  <span class="at">by =</span> <span class="st">&quot;eid&quot;</span>,</span>
+<span id="cb15-476"><a href="#cb15-476" aria-hidden="true" tabindex="-1"></a>  <span class="at">.init =</span> data_pubs_all</span>
+<span id="cb15-477"><a href="#cb15-477" aria-hidden="true" tabindex="-1"></a>) <span class="sc">%&gt;%</span></span>
+<span id="cb15-478"><a href="#cb15-478" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>()</span>
+<span id="cb15-479"><a href="#cb15-479" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-480"><a href="#cb15-480" aria-hidden="true" tabindex="-1"></a><span class="fu">saveRDS</span>(data_pubs_final,</span>
+<span id="cb15-481"><a href="#cb15-481" aria-hidden="true" tabindex="-1"></a>        <span class="at">file =</span> <span class="fu">file.path</span>(settings<span class="sc">$</span>out_dir, <span class="st">&quot;data_pubs_final.rds&quot;</span>))</span>
+<span id="cb15-482"><a href="#cb15-482" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb15-483"><a href="#cb15-483" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-484"><a href="#cb15-484" aria-hidden="true" tabindex="-1"></a>In our pipelines we standardize all Latin binomials to the <span class="co">[</span><span class="ot">GBIF backbone taxonomy</span><span class="co">](https://www.gbif.org/dataset/d7dddbf4-2cf0-4f39-9b2a-bb099caae36c#description)</span>. This involves making the data long (multiple taxa are separated by semicolons in each row) and then extracting the names from the GBIF API. If a species isn&#39;t resolved by the backbone extraction process it is stored in the output directory you specified: <span class="in">`r settings$out_dir`</span>.</span>
+<span id="cb15-484"><a href="#cb15-484" aria-hidden="true" tabindex="-1"></a><span class="fu">## Recover GBIF standard taxonomy</span></span>
 <span id="cb15-485"><a href="#cb15-485" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-486"><a href="#cb15-486" aria-hidden="true" tabindex="-1"></a><span class="in">```{r taxonomy standardisation}</span></span>
+<span id="cb15-486"><a href="#cb15-486" aria-hidden="true" tabindex="-1"></a>In our pipelines we standardize all Latin binomials to the <span class="co">[</span><span class="ot">GBIF backbone taxonomy</span><span class="co">](https://www.gbif.org/dataset/d7dddbf4-2cf0-4f39-9b2a-bb099caae36c#description)</span>. This involves making the data long (multiple taxa are separated by semicolons in each row) and then extracting the names from the GBIF API. If a species isn&#39;t resolved by the backbone extraction process it is stored in the output directory you specified: <span class="in">`r settings$out_dir`</span>.</span>
 <span id="cb15-487"><a href="#cb15-487" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-488"><a href="#cb15-488" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-489"><a href="#cb15-489" aria-hidden="true" tabindex="-1"></a><span class="co"># ===========================================================</span></span>
-<span id="cb15-490"><a href="#cb15-490" aria-hidden="true" tabindex="-1"></a><span class="co"># MERGE AI RESULTS AND GET GBIF NAMES</span></span>
+<span id="cb15-488"><a href="#cb15-488" aria-hidden="true" tabindex="-1"></a><span class="in">```{r taxonomy standardisation}</span></span>
+<span id="cb15-489"><a href="#cb15-489" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-490"><a href="#cb15-490" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-491"><a href="#cb15-491" aria-hidden="true" tabindex="-1"></a><span class="co"># ===========================================================</span></span>
-<span id="cb15-492"><a href="#cb15-492" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-493"><a href="#cb15-493" aria-hidden="true" tabindex="-1"></a>merge_ai_results <span class="ot">&lt;-</span> <span class="cf">function</span>(topic_settings, out_dir, <span class="at">join_col =</span> <span class="st">&quot;eid&quot;</span>) {</span>
-<span id="cb15-494"><a href="#cb15-494" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb15-495"><a href="#cb15-495" aria-hidden="true" tabindex="-1"></a>  results_list <span class="ot">&lt;-</span> purrr<span class="sc">::</span><span class="fu">pmap</span>(</span>
-<span id="cb15-496"><a href="#cb15-496" aria-hidden="true" tabindex="-1"></a>    topic_settings,</span>
-<span id="cb15-497"><a href="#cb15-497" aria-hidden="true" tabindex="-1"></a>    <span class="cf">function</span>(topic_category, output_column, system_text, user_text) {</span>
-<span id="cb15-498"><a href="#cb15-498" aria-hidden="true" tabindex="-1"></a>      </span>
-<span id="cb15-499"><a href="#cb15-499" aria-hidden="true" tabindex="-1"></a>      results_file <span class="ot">&lt;-</span> <span class="fu">file.path</span>(</span>
-<span id="cb15-500"><a href="#cb15-500" aria-hidden="true" tabindex="-1"></a>        out_dir,</span>
-<span id="cb15-501"><a href="#cb15-501" aria-hidden="true" tabindex="-1"></a>        topic_category,</span>
-<span id="cb15-502"><a href="#cb15-502" aria-hidden="true" tabindex="-1"></a>        <span class="fu">paste0</span>(topic_category, <span class="st">&quot;_final_results.rds&quot;</span>)</span>
-<span id="cb15-503"><a href="#cb15-503" aria-hidden="true" tabindex="-1"></a>      )</span>
-<span id="cb15-504"><a href="#cb15-504" aria-hidden="true" tabindex="-1"></a>      </span>
-<span id="cb15-505"><a href="#cb15-505" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (<span class="sc">!</span><span class="fu">file.exists</span>(results_file)) <span class="fu">return</span>(<span class="cn">NULL</span>)</span>
+<span id="cb15-492"><a href="#cb15-492" aria-hidden="true" tabindex="-1"></a><span class="co"># MERGE AI RESULTS AND GET GBIF NAMES</span></span>
+<span id="cb15-493"><a href="#cb15-493" aria-hidden="true" tabindex="-1"></a><span class="co"># ===========================================================</span></span>
+<span id="cb15-494"><a href="#cb15-494" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-495"><a href="#cb15-495" aria-hidden="true" tabindex="-1"></a>merge_ai_results <span class="ot">&lt;-</span> <span class="cf">function</span>(topic_settings, out_dir, <span class="at">join_col =</span> <span class="st">&quot;eid&quot;</span>) {</span>
+<span id="cb15-496"><a href="#cb15-496" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb15-497"><a href="#cb15-497" aria-hidden="true" tabindex="-1"></a>  results_list <span class="ot">&lt;-</span> purrr<span class="sc">::</span><span class="fu">pmap</span>(</span>
+<span id="cb15-498"><a href="#cb15-498" aria-hidden="true" tabindex="-1"></a>    topic_settings,</span>
+<span id="cb15-499"><a href="#cb15-499" aria-hidden="true" tabindex="-1"></a>    <span class="cf">function</span>(topic_category, output_column, system_text, user_text) {</span>
+<span id="cb15-500"><a href="#cb15-500" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb15-501"><a href="#cb15-501" aria-hidden="true" tabindex="-1"></a>      results_file <span class="ot">&lt;-</span> <span class="fu">file.path</span>(</span>
+<span id="cb15-502"><a href="#cb15-502" aria-hidden="true" tabindex="-1"></a>        out_dir,</span>
+<span id="cb15-503"><a href="#cb15-503" aria-hidden="true" tabindex="-1"></a>        topic_category,</span>
+<span id="cb15-504"><a href="#cb15-504" aria-hidden="true" tabindex="-1"></a>        <span class="fu">paste0</span>(topic_category, <span class="st">&quot;_final_results.rds&quot;</span>)</span>
+<span id="cb15-505"><a href="#cb15-505" aria-hidden="true" tabindex="-1"></a>      )</span>
 <span id="cb15-506"><a href="#cb15-506" aria-hidden="true" tabindex="-1"></a>      </span>
-<span id="cb15-507"><a href="#cb15-507" aria-hidden="true" tabindex="-1"></a>      <span class="fu">readRDS</span>(results_file) <span class="sc">%&gt;%</span></span>
-<span id="cb15-508"><a href="#cb15-508" aria-hidden="true" tabindex="-1"></a>        <span class="fu">distinct</span>(.data[[join_col]], <span class="at">.keep_all =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb15-509"><a href="#cb15-509" aria-hidden="true" tabindex="-1"></a>        <span class="fu">select</span>(<span class="fu">all_of</span>(<span class="fu">c</span>(join_col, output_column)))</span>
-<span id="cb15-510"><a href="#cb15-510" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb15-511"><a href="#cb15-511" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb15-512"><a href="#cb15-512" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb15-513"><a href="#cb15-513" aria-hidden="true" tabindex="-1"></a>  purrr<span class="sc">::</span><span class="fu">compact</span>(results_list)</span>
-<span id="cb15-514"><a href="#cb15-514" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb15-515"><a href="#cb15-515" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-516"><a href="#cb15-516" aria-hidden="true" tabindex="-1"></a>ai_results <span class="ot">&lt;-</span> <span class="fu">merge_ai_results</span>(topic_settings, settings<span class="sc">$</span>out_dir)</span>
+<span id="cb15-507"><a href="#cb15-507" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (<span class="sc">!</span><span class="fu">file.exists</span>(results_file)) <span class="fu">return</span>(<span class="cn">NULL</span>)</span>
+<span id="cb15-508"><a href="#cb15-508" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb15-509"><a href="#cb15-509" aria-hidden="true" tabindex="-1"></a>      <span class="fu">readRDS</span>(results_file) <span class="sc">%&gt;%</span></span>
+<span id="cb15-510"><a href="#cb15-510" aria-hidden="true" tabindex="-1"></a>        <span class="fu">distinct</span>(.data[[join_col]], <span class="at">.keep_all =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb15-511"><a href="#cb15-511" aria-hidden="true" tabindex="-1"></a>        <span class="fu">select</span>(<span class="fu">all_of</span>(<span class="fu">c</span>(join_col, output_column)))</span>
+<span id="cb15-512"><a href="#cb15-512" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb15-513"><a href="#cb15-513" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb15-514"><a href="#cb15-514" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb15-515"><a href="#cb15-515" aria-hidden="true" tabindex="-1"></a>  purrr<span class="sc">::</span><span class="fu">compact</span>(results_list)</span>
+<span id="cb15-516"><a href="#cb15-516" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb15-517"><a href="#cb15-517" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-518"><a href="#cb15-518" aria-hidden="true" tabindex="-1"></a>data_pubs_final <span class="ot">&lt;-</span> purrr<span class="sc">::</span><span class="fu">reduce</span>(</span>
-<span id="cb15-519"><a href="#cb15-519" aria-hidden="true" tabindex="-1"></a>  ai_results,</span>
-<span id="cb15-520"><a href="#cb15-520" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span>left_join,</span>
-<span id="cb15-521"><a href="#cb15-521" aria-hidden="true" tabindex="-1"></a>  <span class="at">by =</span> <span class="st">&quot;eid&quot;</span>,</span>
-<span id="cb15-522"><a href="#cb15-522" aria-hidden="true" tabindex="-1"></a>  <span class="at">.init =</span> data_pubs_all</span>
-<span id="cb15-523"><a href="#cb15-523" aria-hidden="true" tabindex="-1"></a>) <span class="sc">%&gt;%</span></span>
-<span id="cb15-524"><a href="#cb15-524" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>()</span>
-<span id="cb15-525"><a href="#cb15-525" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-526"><a href="#cb15-526" aria-hidden="true" tabindex="-1"></a><span class="fu">saveRDS</span>(data_pubs_final,</span>
-<span id="cb15-527"><a href="#cb15-527" aria-hidden="true" tabindex="-1"></a>        <span class="at">file =</span> <span class="fu">file.path</span>(settings<span class="sc">$</span>out_dir, <span class="st">&quot;data_pubs_final.rds&quot;</span>))</span>
-<span id="cb15-528"><a href="#cb15-528" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-529"><a href="#cb15-529" aria-hidden="true" tabindex="-1"></a><span class="co"># ===========================================================</span></span>
-<span id="cb15-530"><a href="#cb15-530" aria-hidden="true" tabindex="-1"></a><span class="co"># LONG FORMAT + GBIF (FULLY GENERALISED)</span></span>
+<span id="cb15-518"><a href="#cb15-518" aria-hidden="true" tabindex="-1"></a>ai_results <span class="ot">&lt;-</span> <span class="fu">merge_ai_results</span>(topic_settings, settings<span class="sc">$</span>out_dir)</span>
+<span id="cb15-519"><a href="#cb15-519" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-520"><a href="#cb15-520" aria-hidden="true" tabindex="-1"></a>data_pubs_final <span class="ot">&lt;-</span> purrr<span class="sc">::</span><span class="fu">reduce</span>(</span>
+<span id="cb15-521"><a href="#cb15-521" aria-hidden="true" tabindex="-1"></a>  ai_results,</span>
+<span id="cb15-522"><a href="#cb15-522" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span>left_join,</span>
+<span id="cb15-523"><a href="#cb15-523" aria-hidden="true" tabindex="-1"></a>  <span class="at">by =</span> <span class="st">&quot;eid&quot;</span>,</span>
+<span id="cb15-524"><a href="#cb15-524" aria-hidden="true" tabindex="-1"></a>  <span class="at">.init =</span> data_pubs_all</span>
+<span id="cb15-525"><a href="#cb15-525" aria-hidden="true" tabindex="-1"></a>) <span class="sc">%&gt;%</span></span>
+<span id="cb15-526"><a href="#cb15-526" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>()</span>
+<span id="cb15-527"><a href="#cb15-527" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-528"><a href="#cb15-528" aria-hidden="true" tabindex="-1"></a><span class="fu">saveRDS</span>(data_pubs_final,</span>
+<span id="cb15-529"><a href="#cb15-529" aria-hidden="true" tabindex="-1"></a>        <span class="at">file =</span> <span class="fu">file.path</span>(settings<span class="sc">$</span>out_dir, <span class="st">&quot;data_pubs_final.rds&quot;</span>))</span>
+<span id="cb15-530"><a href="#cb15-530" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-531"><a href="#cb15-531" aria-hidden="true" tabindex="-1"></a><span class="co"># ===========================================================</span></span>
-<span id="cb15-532"><a href="#cb15-532" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-533"><a href="#cb15-533" aria-hidden="true" tabindex="-1"></a>data_pubs_long <span class="ot">&lt;-</span> data_pubs_final <span class="sc">%&gt;%</span></span>
-<span id="cb15-534"><a href="#cb15-534" aria-hidden="true" tabindex="-1"></a>  tidyr<span class="sc">::</span><span class="fu">separate_longer_delim</span>(</span>
-<span id="cb15-535"><a href="#cb15-535" aria-hidden="true" tabindex="-1"></a>    .data[[settings<span class="sc">$</span>entity_column]],</span>
-<span id="cb15-536"><a href="#cb15-536" aria-hidden="true" tabindex="-1"></a>    <span class="at">delim =</span> settings<span class="sc">$</span>entity_delim</span>
-<span id="cb15-537"><a href="#cb15-537" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
-<span id="cb15-538"><a href="#cb15-538" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb15-539"><a href="#cb15-539" aria-hidden="true" tabindex="-1"></a>    <span class="at">entity_clean =</span> stringr<span class="sc">::</span><span class="fu">str_squish</span>(.data[[settings<span class="sc">$</span>entity_column]])</span>
-<span id="cb15-540"><a href="#cb15-540" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
-<span id="cb15-541"><a href="#cb15-541" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(entity_clean),</span>
-<span id="cb15-542"><a href="#cb15-542" aria-hidden="true" tabindex="-1"></a>         entity_clean <span class="sc">!=</span> <span class="st">&quot;&quot;</span>,</span>
-<span id="cb15-543"><a href="#cb15-543" aria-hidden="true" tabindex="-1"></a>         entity_clean <span class="sc">!=</span> <span class="st">&quot;NA&quot;</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb15-544"><a href="#cb15-544" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>(entity_clean, eid, <span class="at">.keep_all =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb15-545"><a href="#cb15-545" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-546"><a href="#cb15-546" aria-hidden="true" tabindex="-1"></a>gbif_results <span class="ot">&lt;-</span> <span class="fu">f_get_gbif_backbone_ids_from_df</span>(</span>
-<span id="cb15-547"><a href="#cb15-547" aria-hidden="true" tabindex="-1"></a>  <span class="at">df =</span> data_pubs_long,</span>
-<span id="cb15-548"><a href="#cb15-548" aria-hidden="true" tabindex="-1"></a>  <span class="at">species_col =</span> <span class="st">&quot;entity_clean&quot;</span>,</span>
-<span id="cb15-549"><a href="#cb15-549" aria-hidden="true" tabindex="-1"></a>  <span class="at">kingdom =</span> settings<span class="sc">$</span>gbif_kingdom,</span>
-<span id="cb15-550"><a href="#cb15-550" aria-hidden="true" tabindex="-1"></a>  <span class="at">use_progress =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb15-551"><a href="#cb15-551" aria-hidden="true" tabindex="-1"></a>  <span class="at">save =</span> <span class="cn">FALSE</span></span>
-<span id="cb15-552"><a href="#cb15-552" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb15-553"><a href="#cb15-553" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-554"><a href="#cb15-554" aria-hidden="true" tabindex="-1"></a><span class="co"># OPTIONAL FILTER</span></span>
-<span id="cb15-555"><a href="#cb15-555" aria-hidden="true" tabindex="-1"></a>gbif_results <span class="ot">&lt;-</span> gbif_results <span class="sc">%&gt;%</span></span>
-<span id="cb15-556"><a href="#cb15-556" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(kingdom_gbif <span class="sc">==</span> settings<span class="sc">$</span>gbif_kingdom)</span>
-<span id="cb15-557"><a href="#cb15-557" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-558"><a href="#cb15-558" aria-hidden="true" tabindex="-1"></a><span class="co"># JOIN BACK</span></span>
-<span id="cb15-559"><a href="#cb15-559" aria-hidden="true" tabindex="-1"></a>gbif_results_ai <span class="ot">&lt;-</span> gbif_results <span class="sc">%&gt;%</span></span>
-<span id="cb15-560"><a href="#cb15-560" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(data_pubs_long,</span>
-<span id="cb15-561"><a href="#cb15-561" aria-hidden="true" tabindex="-1"></a>            <span class="at">by =</span> <span class="fu">c</span>(<span class="st">&quot;user_supplied_name&quot;</span> <span class="ot">=</span> <span class="st">&quot;entity_clean&quot;</span>))</span>
-<span id="cb15-562"><a href="#cb15-562" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-563"><a href="#cb15-563" aria-hidden="true" tabindex="-1"></a><span class="co"># SAVE</span></span>
-<span id="cb15-564"><a href="#cb15-564" aria-hidden="true" tabindex="-1"></a><span class="fu">saveRDS</span>(</span>
-<span id="cb15-565"><a href="#cb15-565" aria-hidden="true" tabindex="-1"></a>  gbif_results_ai,</span>
-<span id="cb15-566"><a href="#cb15-566" aria-hidden="true" tabindex="-1"></a>  <span class="at">file =</span> <span class="fu">file.path</span>(</span>
-<span id="cb15-567"><a href="#cb15-567" aria-hidden="true" tabindex="-1"></a>    settings<span class="sc">$</span>out_dir,</span>
-<span id="cb15-568"><a href="#cb15-568" aria-hidden="true" tabindex="-1"></a>    <span class="fu">paste0</span>(<span class="st">&quot;gbif_results_&quot;</span>, <span class="fu">Sys.Date</span>(), <span class="st">&quot;.rds&quot;</span>)</span>
-<span id="cb15-569"><a href="#cb15-569" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb15-570"><a href="#cb15-570" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb15-571"><a href="#cb15-571" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb15-572"><a href="#cb15-572" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-573"><a href="#cb15-573" aria-hidden="true" tabindex="-1"></a>In these abstracts there were <span class="in">`r nrow(data_pubs_long %&gt;% filter(on_topic_parsed==&quot;yes&quot;) %&gt;% select(eid) %&gt;% distinct())`</span> articles regarded as relevant. There were <span class="in">`r length(unique(data_pubs_long$weed_name_parsed))`</span> unique names in the parsed name list before using the backbone taxonomy and <span class="in">`r length(unique(gbif_results_ai$species_gbif))`</span> accepted species names after standardisation to the backbone taxonomy and restricting to species level.</span>
+<span id="cb15-532"><a href="#cb15-532" aria-hidden="true" tabindex="-1"></a><span class="co"># LONG FORMAT + GBIF (FULLY GENERALISED)</span></span>
+<span id="cb15-533"><a href="#cb15-533" aria-hidden="true" tabindex="-1"></a><span class="co"># ===========================================================</span></span>
+<span id="cb15-534"><a href="#cb15-534" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-535"><a href="#cb15-535" aria-hidden="true" tabindex="-1"></a>data_pubs_long <span class="ot">&lt;-</span> data_pubs_final <span class="sc">%&gt;%</span></span>
+<span id="cb15-536"><a href="#cb15-536" aria-hidden="true" tabindex="-1"></a>  tidyr<span class="sc">::</span><span class="fu">separate_longer_delim</span>(</span>
+<span id="cb15-537"><a href="#cb15-537" aria-hidden="true" tabindex="-1"></a>    .data[[settings<span class="sc">$</span>entity_column]],</span>
+<span id="cb15-538"><a href="#cb15-538" aria-hidden="true" tabindex="-1"></a>    <span class="at">delim =</span> settings<span class="sc">$</span>entity_delim</span>
+<span id="cb15-539"><a href="#cb15-539" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb15-540"><a href="#cb15-540" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb15-541"><a href="#cb15-541" aria-hidden="true" tabindex="-1"></a>    <span class="at">entity_clean =</span> stringr<span class="sc">::</span><span class="fu">str_squish</span>(.data[[settings<span class="sc">$</span>entity_column]])</span>
+<span id="cb15-542"><a href="#cb15-542" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb15-543"><a href="#cb15-543" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(entity_clean),</span>
+<span id="cb15-544"><a href="#cb15-544" aria-hidden="true" tabindex="-1"></a>         entity_clean <span class="sc">!=</span> <span class="st">&quot;&quot;</span>,</span>
+<span id="cb15-545"><a href="#cb15-545" aria-hidden="true" tabindex="-1"></a>         entity_clean <span class="sc">!=</span> <span class="st">&quot;NA&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb15-546"><a href="#cb15-546" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>(entity_clean, eid, <span class="at">.keep_all =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb15-547"><a href="#cb15-547" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-548"><a href="#cb15-548" aria-hidden="true" tabindex="-1"></a>gbif_results <span class="ot">&lt;-</span> <span class="fu">f_get_gbif_backbone_ids_from_df</span>(</span>
+<span id="cb15-549"><a href="#cb15-549" aria-hidden="true" tabindex="-1"></a>  <span class="at">df =</span> data_pubs_long,</span>
+<span id="cb15-550"><a href="#cb15-550" aria-hidden="true" tabindex="-1"></a>  <span class="at">species_col =</span> <span class="st">&quot;entity_clean&quot;</span>,</span>
+<span id="cb15-551"><a href="#cb15-551" aria-hidden="true" tabindex="-1"></a>  <span class="at">kingdom =</span> settings<span class="sc">$</span>gbif_kingdom,</span>
+<span id="cb15-552"><a href="#cb15-552" aria-hidden="true" tabindex="-1"></a>  <span class="at">use_progress =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb15-553"><a href="#cb15-553" aria-hidden="true" tabindex="-1"></a>  <span class="at">save =</span> <span class="cn">FALSE</span></span>
+<span id="cb15-554"><a href="#cb15-554" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb15-555"><a href="#cb15-555" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-556"><a href="#cb15-556" aria-hidden="true" tabindex="-1"></a><span class="co"># OPTIONAL FILTER</span></span>
+<span id="cb15-557"><a href="#cb15-557" aria-hidden="true" tabindex="-1"></a>gbif_results <span class="ot">&lt;-</span> gbif_results <span class="sc">%&gt;%</span></span>
+<span id="cb15-558"><a href="#cb15-558" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(kingdom_gbif <span class="sc">==</span> settings<span class="sc">$</span>gbif_kingdom)</span>
+<span id="cb15-559"><a href="#cb15-559" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-560"><a href="#cb15-560" aria-hidden="true" tabindex="-1"></a><span class="co"># JOIN BACK</span></span>
+<span id="cb15-561"><a href="#cb15-561" aria-hidden="true" tabindex="-1"></a>gbif_results_ai <span class="ot">&lt;-</span> gbif_results <span class="sc">%&gt;%</span></span>
+<span id="cb15-562"><a href="#cb15-562" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(data_pubs_long,</span>
+<span id="cb15-563"><a href="#cb15-563" aria-hidden="true" tabindex="-1"></a>            <span class="at">by =</span> <span class="fu">c</span>(<span class="st">&quot;user_supplied_name&quot;</span> <span class="ot">=</span> <span class="st">&quot;entity_clean&quot;</span>))</span>
+<span id="cb15-564"><a href="#cb15-564" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-565"><a href="#cb15-565" aria-hidden="true" tabindex="-1"></a><span class="co"># SAVE</span></span>
+<span id="cb15-566"><a href="#cb15-566" aria-hidden="true" tabindex="-1"></a><span class="fu">saveRDS</span>(</span>
+<span id="cb15-567"><a href="#cb15-567" aria-hidden="true" tabindex="-1"></a>  gbif_results_ai,</span>
+<span id="cb15-568"><a href="#cb15-568" aria-hidden="true" tabindex="-1"></a>  <span class="at">file =</span> <span class="fu">file.path</span>(</span>
+<span id="cb15-569"><a href="#cb15-569" aria-hidden="true" tabindex="-1"></a>    settings<span class="sc">$</span>out_dir,</span>
+<span id="cb15-570"><a href="#cb15-570" aria-hidden="true" tabindex="-1"></a>    <span class="fu">paste0</span>(<span class="st">&quot;gbif_results_&quot;</span>, <span class="fu">Sys.Date</span>(), <span class="st">&quot;.rds&quot;</span>)</span>
+<span id="cb15-571"><a href="#cb15-571" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb15-572"><a href="#cb15-572" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb15-573"><a href="#cb15-573" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb15-574"><a href="#cb15-574" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-575"><a href="#cb15-575" aria-hidden="true" tabindex="-1"></a><span class="fu">## Table of articles per species</span></span>
+<span id="cb15-575"><a href="#cb15-575" aria-hidden="true" tabindex="-1"></a>In these abstracts there were <span class="in">`r nrow(data_pubs_long %&gt;% filter(on_topic_parsed==&quot;yes&quot;) %&gt;% select(eid) %&gt;% distinct())`</span> articles regarded as relevant. There were <span class="in">`r length(unique(data_pubs_long$weed_name_parsed))`</span> unique names in the parsed name list before using the backbone taxonomy and <span class="in">`r length(unique(gbif_results_ai$species_gbif))`</span> accepted species names after standardisation to the backbone taxonomy and restricting to species level.</span>
 <span id="cb15-576"><a href="#cb15-576" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-577"><a href="#cb15-577" aria-hidden="true" tabindex="-1"></a>In our usual application of this we count the number of articles per species in our corpus <span class="co">[</span><span class="ot">@tbl-unique-article-ids-per-species</span><span class="co">]</span>.</span>
+<span id="cb15-577"><a href="#cb15-577" aria-hidden="true" tabindex="-1"></a><span class="fu">## Table of articles per species</span></span>
 <span id="cb15-578"><a href="#cb15-578" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-581"><a href="#cb15-581" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb15-582"><a href="#cb15-582" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: tbl-unique-article-ids-per-species</span></span>
-<span id="cb15-583"><a href="#cb15-583" aria-hidden="true" tabindex="-1"></a><span class="co">#| tbl-cap: &quot;Number of unique articles per species&quot;</span></span>
-<span id="cb15-584"><a href="#cb15-584" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-585"><a href="#cb15-585" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-586"><a href="#cb15-586" aria-hidden="true" tabindex="-1"></a>p_table_ai <span class="ot">&lt;-</span> gbif_results_ai <span class="sc">%&gt;%</span></span>
-<span id="cb15-587"><a href="#cb15-587" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(species_gbif)) <span class="sc">%&gt;%</span></span>
-<span id="cb15-588"><a href="#cb15-588" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(species_gbif) <span class="sc">%&gt;%</span></span>
-<span id="cb15-589"><a href="#cb15-589" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
-<span id="cb15-590"><a href="#cb15-590" aria-hidden="true" tabindex="-1"></a>    <span class="at">publication_count =</span> <span class="fu">n_distinct</span>(eid),</span>
-<span id="cb15-591"><a href="#cb15-591" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_used =</span> <span class="fu">paste</span>(<span class="fu">sort</span>(<span class="fu">unique</span>(user_supplied_name)), <span class="at">collapse =</span> <span class="st">&quot;; &quot;</span>),</span>
-<span id="cb15-592"><a href="#cb15-592" aria-hidden="true" tabindex="-1"></a>    <span class="at">.groups =</span> <span class="st">&quot;drop&quot;</span></span>
-<span id="cb15-593"><a href="#cb15-593" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
-<span id="cb15-594"><a href="#cb15-594" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(publication_count))</span>
-<span id="cb15-595"><a href="#cb15-595" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-596"><a href="#cb15-596" aria-hidden="true" tabindex="-1"></a>p_table_ai <span class="sc">%&gt;%</span></span>
-<span id="cb15-597"><a href="#cb15-597" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb15-598"><a href="#cb15-598" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_header</span>(<span class="at">title =</span> <span class="st">&quot;Publication counts by accepted species (GBIF)&quot;</span>)</span>
-<span id="cb15-599"><a href="#cb15-599" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-600"><a href="#cb15-600" aria-hidden="true" tabindex="-1"></a><span class="fu">saveRDS</span>(</span>
-<span id="cb15-601"><a href="#cb15-601" aria-hidden="true" tabindex="-1"></a>  p_table_ai,</span>
-<span id="cb15-602"><a href="#cb15-602" aria-hidden="true" tabindex="-1"></a>  <span class="at">file =</span> <span class="fu">file.path</span>(settings<span class="sc">$</span>out_dir,</span>
-<span id="cb15-603"><a href="#cb15-603" aria-hidden="true" tabindex="-1"></a>                   <span class="fu">paste0</span>(<span class="st">&quot;article_counts_by_species_&quot;</span>, <span class="fu">Sys.Date</span>(), <span class="st">&quot;.rds&quot;</span>))</span>
-<span id="cb15-604"><a href="#cb15-604" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb15-605"><a href="#cb15-605" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-606"><a href="#cb15-606" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-607"><a href="#cb15-607" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb15-579"><a href="#cb15-579" aria-hidden="true" tabindex="-1"></a>In our usual application of this we count the number of articles per species in our corpus <span class="co">[</span><span class="ot">@tbl-unique-article-ids-per-species</span><span class="co">]</span>.</span>
+<span id="cb15-580"><a href="#cb15-580" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-583"><a href="#cb15-583" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb15-584"><a href="#cb15-584" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: tbl-unique-article-ids-per-species</span></span>
+<span id="cb15-585"><a href="#cb15-585" aria-hidden="true" tabindex="-1"></a><span class="co">#| tbl-cap: &quot;Number of unique articles per species&quot;</span></span>
+<span id="cb15-586"><a href="#cb15-586" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-587"><a href="#cb15-587" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-588"><a href="#cb15-588" aria-hidden="true" tabindex="-1"></a>p_table_ai <span class="ot">&lt;-</span> gbif_results_ai <span class="sc">%&gt;%</span></span>
+<span id="cb15-589"><a href="#cb15-589" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(species_gbif)) <span class="sc">%&gt;%</span></span>
+<span id="cb15-590"><a href="#cb15-590" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(species_gbif) <span class="sc">%&gt;%</span></span>
+<span id="cb15-591"><a href="#cb15-591" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb15-592"><a href="#cb15-592" aria-hidden="true" tabindex="-1"></a>    <span class="at">publication_count =</span> <span class="fu">n_distinct</span>(eid),</span>
+<span id="cb15-593"><a href="#cb15-593" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_used =</span> <span class="fu">paste</span>(<span class="fu">sort</span>(<span class="fu">unique</span>(user_supplied_name)), <span class="at">collapse =</span> <span class="st">&quot;; &quot;</span>),</span>
+<span id="cb15-594"><a href="#cb15-594" aria-hidden="true" tabindex="-1"></a>    <span class="at">.groups =</span> <span class="st">&quot;drop&quot;</span></span>
+<span id="cb15-595"><a href="#cb15-595" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb15-596"><a href="#cb15-596" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(publication_count))</span>
+<span id="cb15-597"><a href="#cb15-597" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-598"><a href="#cb15-598" aria-hidden="true" tabindex="-1"></a>p_table_ai <span class="sc">%&gt;%</span></span>
+<span id="cb15-599"><a href="#cb15-599" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb15-600"><a href="#cb15-600" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_header</span>(<span class="at">title =</span> <span class="st">&quot;Publication counts by accepted species (GBIF)&quot;</span>)</span>
+<span id="cb15-601"><a href="#cb15-601" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-602"><a href="#cb15-602" aria-hidden="true" tabindex="-1"></a><span class="fu">saveRDS</span>(</span>
+<span id="cb15-603"><a href="#cb15-603" aria-hidden="true" tabindex="-1"></a>  p_table_ai,</span>
+<span id="cb15-604"><a href="#cb15-604" aria-hidden="true" tabindex="-1"></a>  <span class="at">file =</span> <span class="fu">file.path</span>(settings<span class="sc">$</span>out_dir,</span>
+<span id="cb15-605"><a href="#cb15-605" aria-hidden="true" tabindex="-1"></a>                   <span class="fu">paste0</span>(<span class="st">&quot;article_counts_by_species_&quot;</span>, <span class="fu">Sys.Date</span>(), <span class="st">&quot;.rds&quot;</span>))</span>
+<span id="cb15-606"><a href="#cb15-606" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb15-607"><a href="#cb15-607" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-608"><a href="#cb15-608" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-609"><a href="#cb15-609" aria-hidden="true" tabindex="-1"></a>If you want to modify the prompt for a different set of questions you can potentially use an LLM provider to create new prompts in the correct format, paste the prompt that works and suggest new prompts. Or you can run another example I provided for prompt_2 (after changing the output directory).</span>
+<span id="cb15-609"><a href="#cb15-609" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb15-610"><a href="#cb15-610" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-611"><a href="#cb15-611" aria-hidden="true" tabindex="-1"></a>If you want to modify the prompt for a different set of questions you can potentially use an LLM provider to create new prompts in the correct format, paste the prompt that works and suggest new prompts. Or you can run another example I provided for prompt_2 (after changing the output directory).</span>
 </code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

@@ -8,10 +8,12 @@ exclude:
 
 website:
   title: "R Pipeline"
+  site-url: "https://cbud.github.io/biosecurity-symposium/"
   navbar:
     left:
       - text: "Home"
         href: AI_biosecurity_workshop.qmd
+        
 
 format:
   html:

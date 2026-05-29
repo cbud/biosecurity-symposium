@@ -19,3 +19,7 @@ docs/site_libs/
 Thumbs.db
 
 
+.positai
+
+/.quarto/
+**/*.quarto_ipynb

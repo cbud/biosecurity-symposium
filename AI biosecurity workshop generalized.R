@@ -27,7 +27,7 @@ settings <- list(
   on_topic_pattern = "^yes",
   
   # ENTITY COLUMN (parsed names from AI)
-  entity_column = "weed_name_parsed",            # <-- changeable
+  entity_column = "weed_name_parsed",            # <-- changeable must match prompts
   entity_delim = ";",
   
   # GBIF SETTINGS
@@ -43,7 +43,7 @@ settings <- list(
 
 required_packages <- c(
   "tidyverse","readxl","janitor","httr","jsonlite",
-  "progress","tictoc","openai","gt","knitr"
+  "progressr","tictoc","openai","gt","knitr"
 )
 
 installed <- rownames(installed.packages())

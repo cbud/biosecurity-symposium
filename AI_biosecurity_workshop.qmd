@@ -34,7 +34,7 @@ author:
 
 required_packages <- c(
   "tidyverse","readxl","janitor","httr","jsonlite",
-  "progress","tictoc","openai","gt","knitr"
+  "progressr","tictoc","openai","gt","knitr"
 )
 
 installed <- rownames(installed.packages())

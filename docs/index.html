@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Christopher E Buddenhagen">
-<meta name="dcterms.date" content="2026-05-29">
+<meta name="dcterms.date" content="2026-06-03">
 
 <title>LLM analysis of a biosecurity corpus – R Pipeline</title>
 <style>
@@ -3978,7 +3978,7 @@ vertical-align: -.125em;
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">May 29, 2026</p>
+      <p class="date">June 3, 2026</p>
     </div>
   </div>
   
@@ -3995,7 +3995,7 @@ vertical-align: -.125em;
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>required_packages <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;tidyverse&quot;</span>,<span class="st">&quot;readxl&quot;</span>,<span class="st">&quot;janitor&quot;</span>,<span class="st">&quot;httr&quot;</span>,<span class="st">&quot;jsonlite&quot;</span>,</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;progress&quot;</span>,<span class="st">&quot;tictoc&quot;</span>,<span class="st">&quot;openai&quot;</span>,<span class="st">&quot;gt&quot;</span>,<span class="st">&quot;knitr&quot;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;progressr&quot;</span>,<span class="st">&quot;tictoc&quot;</span>,<span class="st">&quot;openai&quot;</span>,<span class="st">&quot;gt&quot;</span>,<span class="st">&quot;knitr&quot;</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>installed <span class="ot">&lt;-</span> <span class="fu">rownames</span>(<span class="fu">installed.packages</span>())</span>
@@ -4281,8 +4281,8 @@ vertical-align: -.125em;
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>          used (Mb) gc trigger  (Mb) max used  (Mb)
-Ncells 1473734 78.8    2524375 134.9  2524375 134.9
-Vcells 2688029 20.6    8388608  64.0  3791194  29.0</code></pre>
+Ncells 1473732 78.8    2524375 134.9  2524375 134.9
+Vcells 2688047 20.6    8388608  64.0  3788529  29.0</code></pre>
 </div>
 <details class="code-fold">
 <summary>Code</summary>
@@ -4298,8 +4298,8 @@ Vcells 2688029 20.6    8388608  64.0  3791194  29.0</code></pre>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>          used (Mb) gc trigger  (Mb) max used  (Mb)
-Ncells 1475729 78.9    2524375 134.9  2524375 134.9
-Vcells 2697437 20.6    8388608  64.0  3791194  29.0</code></pre>
+Ncells 1475727 78.9    2524375 134.9  2524375 134.9
+Vcells 2697455 20.6    8388608  64.0  3788529  29.0</code></pre>
 </div>
 <details class="code-fold">
 <summary>Code</summary>
@@ -4311,7 +4311,7 @@ Vcells 2697437 20.6    8388608  64.0  3791194  29.0</code></pre>
 <span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="fu">toc</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>142.28 sec elapsed</code></pre>
+<pre><code>130.05 sec elapsed</code></pre>
 </div>
 <details class="code-fold">
 <summary>Code</summary>
@@ -4330,8 +4330,8 @@ Vcells 2697437 20.6    8388608  64.0  3791194  29.0</code></pre>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>          used (Mb) gc trigger  (Mb) max used  (Mb)
-Ncells 1478499 79.0    2524375 134.9  2524375 134.9
-Vcells 2701888 20.7    8388608  64.0  3791194  29.0</code></pre>
+Ncells 1478497 79.0    2524375 134.9  2524375 134.9
+Vcells 2701833 20.7    8388608  64.0  3788529  29.0</code></pre>
 </div>
 <details class="code-fold">
 <summary>Code</summary>
@@ -4405,7 +4405,7 @@ Vcells 2701888 20.7    8388608  64.0  3791194  29.0</code></pre>
 <span id="cb10-68"><a href="#cb10-68" aria-hidden="true" tabindex="-1"></a><span class="fu">toc</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>114.56 sec elapsed</code></pre>
+<pre><code>118.74 sec elapsed</code></pre>
 </div>
 </div>
 <p>After you run the ai recovery the data is stored for each chunk in separate folders for each topic and needs to be combined into a master file that stores the topic outputs described in the prompt and the original data. This code should work no matter how many prompt topics you are running. The script here takes about 5 minutes. An example script is also here: “AI biosecurity workshop generalized.R”.</p>
@@ -4544,7 +4544,7 @@ Vcells 2701888 20.7    8388608  64.0  3791194  29.0</code></pre>
 <span id="cb13-82"><a href="#cb13-82" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<p>In these abstracts there were 98 articles regarded as relevant. There were 185 unique names in the parsed name list before using the backbone taxonomy and 156 accepted species names after standardisation to the backbone taxonomy and restricting to species level.</p>
+<p>In these abstracts there were 96 articles regarded as relevant. There were 174 unique names in the parsed name list before using the backbone taxonomy and 151 accepted species names after standardisation to the backbone taxonomy and restricting to species level.</p>
 </section>
 <section id="table-of-articles-per-species" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="table-of-articles-per-species">Table of articles per species</h2>
@@ -4575,20 +4575,20 @@ Vcells 2701888 20.7    8388608  64.0  3791194  29.0</code></pre>
 <figure class="quarto-float quarto-float-tbl figure page-columns page-full">
 <div aria-describedby="tbl-unique-article-ids-per-species-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="hsqjnipubq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#hsqjnipubq table {
+<div id="neeezhsfum" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#neeezhsfum table {
 font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 -webkit-font-smoothing: antialiased;
 -moz-osx-font-smoothing: grayscale;
 }
-#hsqjnipubq thead, #hsqjnipubq tbody, #hsqjnipubq tfoot, #hsqjnipubq tr, #hsqjnipubq td, #hsqjnipubq th {
+#neeezhsfum thead, #neeezhsfum tbody, #neeezhsfum tfoot, #neeezhsfum tr, #neeezhsfum td, #neeezhsfum th {
 border-style: none;
 }
-#hsqjnipubq p {
+#neeezhsfum p {
 margin: 0;
 padding: 0;
 }
-#hsqjnipubq .gt_table {
+#neeezhsfum .gt_table {
 display: table;
 border-collapse: collapse;
 line-height: normal;
@@ -4613,11 +4613,11 @@ border-left-style: none;
 border-left-width: 2px;
 border-left-color: #D3D3D3;
 }
-#hsqjnipubq .gt_caption {
+#neeezhsfum .gt_caption {
 padding-top: 4px;
 padding-bottom: 4px;
 }
-#hsqjnipubq .gt_title {
+#neeezhsfum .gt_title {
 color: #333333;
 font-size: 125%;
 font-weight: initial;
@@ -4628,7 +4628,7 @@ padding-right: 5px;
 border-bottom-color: #FFFFFF;
 border-bottom-width: 0;
 }
-#hsqjnipubq .gt_subtitle {
+#neeezhsfum .gt_subtitle {
 color: #333333;
 font-size: 85%;
 font-weight: initial;
@@ -4639,7 +4639,7 @@ padding-right: 5px;
 border-top-color: #FFFFFF;
 border-top-width: 0;
 }
-#hsqjnipubq .gt_heading {
+#neeezhsfum .gt_heading {
 background-color: #FFFFFF;
 text-align: center;
 border-bottom-color: #FFFFFF;
@@ -4650,12 +4650,12 @@ border-right-style: none;
 border-right-width: 1px;
 border-right-color: #D3D3D3;
 }
-#hsqjnipubq .gt_bottom_border {
+#neeezhsfum .gt_bottom_border {
 border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#hsqjnipubq .gt_col_headings {
+#neeezhsfum .gt_col_headings {
 border-top-style: solid;
 border-top-width: 2px;
 border-top-color: #D3D3D3;
@@ -4669,7 +4669,7 @@ border-right-style: none;
 border-right-width: 1px;
 border-right-color: #D3D3D3;
 }
-#hsqjnipubq .gt_col_heading {
+#neeezhsfum .gt_col_heading {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -4688,7 +4688,7 @@ padding-left: 5px;
 padding-right: 5px;
 overflow-x: hidden;
 }
-#hsqjnipubq .gt_column_spanner_outer {
+#neeezhsfum .gt_column_spanner_outer {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -4699,13 +4699,13 @@ padding-bottom: 0;
 padding-left: 4px;
 padding-right: 4px;
 }
-#hsqjnipubq .gt_column_spanner_outer:first-child {
+#neeezhsfum .gt_column_spanner_outer:first-child {
 padding-left: 0;
 }
-#hsqjnipubq .gt_column_spanner_outer:last-child {
+#neeezhsfum .gt_column_spanner_outer:last-child {
 padding-right: 0;
 }
-#hsqjnipubq .gt_column_spanner {
+#neeezhsfum .gt_column_spanner {
 border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
@@ -4716,10 +4716,10 @@ overflow-x: hidden;
 display: inline-block;
 width: 100%;
 }
-#hsqjnipubq .gt_spanner_row {
+#neeezhsfum .gt_spanner_row {
 border-bottom-style: hidden;
 }
-#hsqjnipubq .gt_group_heading {
+#neeezhsfum .gt_group_heading {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -4744,7 +4744,7 @@ border-right-color: #D3D3D3;
 vertical-align: middle;
 text-align: left;
 }
-#hsqjnipubq .gt_empty_group_heading {
+#neeezhsfum .gt_empty_group_heading {
 padding: 0.5px;
 color: #333333;
 background-color: #FFFFFF;
@@ -4758,13 +4758,13 @@ border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 vertical-align: middle;
 }
-#hsqjnipubq .gt_from_md > :first-child {
+#neeezhsfum .gt_from_md > :first-child {
 margin-top: 0;
 }
-#hsqjnipubq .gt_from_md > :last-child {
+#neeezhsfum .gt_from_md > :last-child {
 margin-bottom: 0;
 }
-#hsqjnipubq .gt_row {
+#neeezhsfum .gt_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -4782,7 +4782,7 @@ border-right-color: #D3D3D3;
 vertical-align: middle;
 overflow-x: hidden;
 }
-#hsqjnipubq .gt_stub {
+#neeezhsfum .gt_stub {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -4794,7 +4794,7 @@ border-right-color: #D3D3D3;
 padding-left: 5px;
 padding-right: 5px;
 }
-#hsqjnipubq .gt_stub_row_group {
+#neeezhsfum .gt_stub_row_group {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -4807,13 +4807,13 @@ padding-left: 5px;
 padding-right: 5px;
 vertical-align: top;
 }
-#hsqjnipubq .gt_row_group_first td {
+#neeezhsfum .gt_row_group_first td {
 border-top-width: 2px;
 }
-#hsqjnipubq .gt_row_group_first th {
+#neeezhsfum .gt_row_group_first th {
 border-top-width: 2px;
 }
-#hsqjnipubq .gt_summary_row {
+#neeezhsfum .gt_summary_row {
 color: #333333;
 background-color: #FFFFFF;
 text-transform: inherit;
@@ -4822,14 +4822,14 @@ padding-bottom: 8px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#hsqjnipubq .gt_first_summary_row {
+#neeezhsfum .gt_first_summary_row {
 border-top-style: solid;
 border-top-color: #D3D3D3;
 }
-#hsqjnipubq .gt_first_summary_row.thick {
+#neeezhsfum .gt_first_summary_row.thick {
 border-top-width: 2px;
 }
-#hsqjnipubq .gt_last_summary_row {
+#neeezhsfum .gt_last_summary_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -4838,7 +4838,7 @@ border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#hsqjnipubq .gt_grand_summary_row {
+#neeezhsfum .gt_grand_summary_row {
 color: #333333;
 background-color: #FFFFFF;
 text-transform: inherit;
@@ -4847,7 +4847,7 @@ padding-bottom: 8px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#hsqjnipubq .gt_first_grand_summary_row {
+#neeezhsfum .gt_first_grand_summary_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -4856,7 +4856,7 @@ border-top-style: double;
 border-top-width: 6px;
 border-top-color: #D3D3D3;
 }
-#hsqjnipubq .gt_last_grand_summary_row_top {
+#neeezhsfum .gt_last_grand_summary_row_top {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -4865,10 +4865,10 @@ border-bottom-style: double;
 border-bottom-width: 6px;
 border-bottom-color: #D3D3D3;
 }
-#hsqjnipubq .gt_striped {
+#neeezhsfum .gt_striped {
 background-color: rgba(128, 128, 128, 0.05);
 }
-#hsqjnipubq .gt_table_body {
+#neeezhsfum .gt_table_body {
 border-top-style: solid;
 border-top-width: 2px;
 border-top-color: #D3D3D3;
@@ -4876,7 +4876,7 @@ border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#hsqjnipubq .gt_footnotes {
+#neeezhsfum .gt_footnotes {
 color: #333333;
 background-color: #FFFFFF;
 border-bottom-style: none;
@@ -4889,7 +4889,7 @@ border-right-style: none;
 border-right-width: 2px;
 border-right-color: #D3D3D3;
 }
-#hsqjnipubq .gt_footnote {
+#neeezhsfum .gt_footnote {
 margin: 0px;
 font-size: 90%;
 padding-top: 4px;
@@ -4897,7 +4897,7 @@ padding-bottom: 4px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#hsqjnipubq .gt_sourcenotes {
+#neeezhsfum .gt_sourcenotes {
 color: #333333;
 background-color: #FFFFFF;
 border-bottom-style: none;
@@ -4910,64 +4910,64 @@ border-right-style: none;
 border-right-width: 2px;
 border-right-color: #D3D3D3;
 }
-#hsqjnipubq .gt_sourcenote {
+#neeezhsfum .gt_sourcenote {
 font-size: 90%;
 padding-top: 4px;
 padding-bottom: 4px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#hsqjnipubq .gt_left {
+#neeezhsfum .gt_left {
 text-align: left;
 }
-#hsqjnipubq .gt_center {
+#neeezhsfum .gt_center {
 text-align: center;
 }
-#hsqjnipubq .gt_right {
+#neeezhsfum .gt_right {
 text-align: right;
 font-variant-numeric: tabular-nums;
 }
-#hsqjnipubq .gt_font_normal {
+#neeezhsfum .gt_font_normal {
 font-weight: normal;
 }
-#hsqjnipubq .gt_font_bold {
+#neeezhsfum .gt_font_bold {
 font-weight: bold;
 }
-#hsqjnipubq .gt_font_italic {
+#neeezhsfum .gt_font_italic {
 font-style: italic;
 }
-#hsqjnipubq .gt_super {
+#neeezhsfum .gt_super {
 font-size: 65%;
 }
-#hsqjnipubq .gt_footnote_marks {
+#neeezhsfum .gt_footnote_marks {
 font-size: 75%;
 vertical-align: 0.4em;
 position: initial;
 }
-#hsqjnipubq .gt_asterisk {
+#neeezhsfum .gt_asterisk {
 font-size: 100%;
 vertical-align: 0;
 }
-#hsqjnipubq .gt_indent_1 {
+#neeezhsfum .gt_indent_1 {
 text-indent: 5px;
 }
-#hsqjnipubq .gt_indent_2 {
+#neeezhsfum .gt_indent_2 {
 text-indent: 10px;
 }
-#hsqjnipubq .gt_indent_3 {
+#neeezhsfum .gt_indent_3 {
 text-indent: 15px;
 }
-#hsqjnipubq .gt_indent_4 {
+#neeezhsfum .gt_indent_4 {
 text-indent: 20px;
 }
-#hsqjnipubq .gt_indent_5 {
+#neeezhsfum .gt_indent_5 {
 text-indent: 25px;
 }
-#hsqjnipubq .katex-display {
+#neeezhsfum .katex-display {
 display: inline-flex !important;
 margin-bottom: 0.75em !important;
 }
-#hsqjnipubq div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#neeezhsfum div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
 height: 0px !important;
 }
 </style>
@@ -4985,14 +4985,14 @@ height: 0px !important;
 </thead>
 <tbody class="gt_table_body">
 <tr class="odd">
+<td class="gt_row gt_left" headers="species_gbif">Echinochloa crus-galli</td>
+<td class="gt_row gt_right" headers="publication_count">7</td>
+<td class="gt_row gt_left" headers="names_used">Echinochloa crus-galli</td>
+</tr>
+<tr class="even">
 <td class="gt_row gt_left" headers="species_gbif">Chenopodium album</td>
 <td class="gt_row gt_right" headers="publication_count">6</td>
 <td class="gt_row gt_left" headers="names_used">Chenopodium album</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="species_gbif">Echinochloa crus-galli</td>
-<td class="gt_row gt_right" headers="publication_count">6</td>
-<td class="gt_row gt_left" headers="names_used">Echinochloa crus-galli</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="species_gbif">Avena fatua</td>
@@ -5010,94 +5010,84 @@ height: 0px !important;
 <td class="gt_row gt_left" headers="names_used">Digitaria sanguinalis</td>
 </tr>
 <tr class="even">
+<td class="gt_row gt_left" headers="species_gbif">Eleusine indica</td>
+<td class="gt_row gt_right" headers="publication_count">4</td>
+<td class="gt_row gt_left" headers="names_used">Eleusine indica</td>
+</tr>
+<tr class="odd">
 <td class="gt_row gt_left" headers="species_gbif">Amaranthus retroflexus</td>
 <td class="gt_row gt_right" headers="publication_count">3</td>
 <td class="gt_row gt_left" headers="names_used">Amaranthus retroflexus</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td class="gt_row gt_left" headers="species_gbif">Ambrosia artemisiifolia</td>
 <td class="gt_row gt_right" headers="publication_count">3</td>
 <td class="gt_row gt_left" headers="names_used">Ambrosia artemisiifolia</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td class="gt_row gt_left" headers="species_gbif">Bromus tectorum</td>
 <td class="gt_row gt_right" headers="publication_count">3</td>
 <td class="gt_row gt_left" headers="names_used">Bromus tectorum</td>
 </tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="species_gbif">Echinochloa colonum</td>
-<td class="gt_row gt_right" headers="publication_count">3</td>
-<td class="gt_row gt_left" headers="names_used">Echinochloa colona</td>
-</tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="species_gbif">Eleusine indica</td>
+<td class="gt_row gt_left" headers="species_gbif">Cyperus rotundus</td>
 <td class="gt_row gt_right" headers="publication_count">3</td>
-<td class="gt_row gt_left" headers="names_used">Eleusine indica</td>
+<td class="gt_row gt_left" headers="names_used">Cyperus rotundus</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_left" headers="species_gbif">Lolium multiflorum</td>
-<td class="gt_row gt_right" headers="publication_count">3</td>
-<td class="gt_row gt_left" headers="names_used">Lolium multiflorum</td>
-</tr>
-<tr class="even">
 <td class="gt_row gt_left" headers="species_gbif">Sorghum halepense</td>
 <td class="gt_row gt_right" headers="publication_count">3</td>
 <td class="gt_row gt_left" headers="names_used">Sorghum halepense</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td class="gt_row gt_left" headers="species_gbif">Taraxacum officinale</td>
 <td class="gt_row gt_right" headers="publication_count">3</td>
 <td class="gt_row gt_left" headers="names_used">Taraxacum officinale</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td class="gt_row gt_left" headers="species_gbif">Ailanthus altissima</td>
 <td class="gt_row gt_right" headers="publication_count">2</td>
 <td class="gt_row gt_left" headers="names_used">Ailanthus altissima</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td class="gt_row gt_left" headers="species_gbif">Bromus diandrus</td>
 <td class="gt_row gt_right" headers="publication_count">2</td>
 <td class="gt_row gt_left" headers="names_used">Bromus diandrus</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td class="gt_row gt_left" headers="species_gbif">Bromus inermis</td>
 <td class="gt_row gt_right" headers="publication_count">2</td>
 <td class="gt_row gt_left" headers="names_used">Bromus inermis</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td class="gt_row gt_left" headers="species_gbif">Buxus sempervirens</td>
 <td class="gt_row gt_right" headers="publication_count">2</td>
 <td class="gt_row gt_left" headers="names_used">Buxus sempervirens</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td class="gt_row gt_left" headers="species_gbif">Calamagrostis arenaria</td>
 <td class="gt_row gt_right" headers="publication_count">2</td>
 <td class="gt_row gt_left" headers="names_used">Ammophila arenaria</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td class="gt_row gt_left" headers="species_gbif">Cenchrus ciliaris</td>
 <td class="gt_row gt_right" headers="publication_count">2</td>
 <td class="gt_row gt_left" headers="names_used">Cenchrus ciliaris</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td class="gt_row gt_left" headers="species_gbif">Chondrilla juncea</td>
 <td class="gt_row gt_right" headers="publication_count">2</td>
 <td class="gt_row gt_left" headers="names_used">Chondrilla juncea</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td class="gt_row gt_left" headers="species_gbif">Commelina benghalensis</td>
 <td class="gt_row gt_right" headers="publication_count">2</td>
-<td class="gt_row gt_left" headers="names_used">Commelina benghalensis; Commenlina benghalensis</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="species_gbif">Cyperus iria</td>
-<td class="gt_row gt_right" headers="publication_count">2</td>
-<td class="gt_row gt_left" headers="names_used">Cyperus iria</td>
+<td class="gt_row gt_left" headers="names_used">Commelina benghalensis</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_left" headers="species_gbif">Cyperus rotundus</td>
+<td class="gt_row gt_left" headers="species_gbif">Echinochloa colonum</td>
 <td class="gt_row gt_right" headers="publication_count">2</td>
-<td class="gt_row gt_left" headers="names_used">Cyperus rotundus</td>
+<td class="gt_row gt_left" headers="names_used">Echinochloa colona</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="species_gbif">Elymus repens</td>
@@ -5115,6 +5105,16 @@ height: 0px !important;
 <td class="gt_row gt_left" headers="names_used">Euphorbia heterophylla</td>
 </tr>
 <tr class="odd">
+<td class="gt_row gt_left" headers="species_gbif">Lolium multiflorum</td>
+<td class="gt_row gt_right" headers="publication_count">2</td>
+<td class="gt_row gt_left" headers="names_used">Lolium multiflorum</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="species_gbif">Medicago sativa</td>
+<td class="gt_row gt_right" headers="publication_count">2</td>
+<td class="gt_row gt_left" headers="names_used">Medicago sativa</td>
+</tr>
+<tr class="odd">
 <td class="gt_row gt_left" headers="species_gbif">Melaleuca quinquenervia</td>
 <td class="gt_row gt_right" headers="publication_count">2</td>
 <td class="gt_row gt_left" headers="names_used">Melaleuca quinquenervia</td>
@@ -5125,29 +5125,19 @@ height: 0px !important;
 <td class="gt_row gt_left" headers="names_used">Orobanche ramosa</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_left" headers="species_gbif">Oryza sativa</td>
-<td class="gt_row gt_right" headers="publication_count">2</td>
-<td class="gt_row gt_left" headers="names_used">Oryza sativa</td>
-</tr>
-<tr class="even">
 <td class="gt_row gt_left" headers="species_gbif">Phelipanche ramosa</td>
 <td class="gt_row gt_right" headers="publication_count">2</td>
 <td class="gt_row gt_left" headers="names_used">Phelipanche ramosa</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td class="gt_row gt_left" headers="species_gbif">Pontederia crassipes</td>
 <td class="gt_row gt_right" headers="publication_count">2</td>
 <td class="gt_row gt_left" headers="names_used">Eichhornia crassipes</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td class="gt_row gt_left" headers="species_gbif">Portulaca oleracea</td>
 <td class="gt_row gt_right" headers="publication_count">2</td>
 <td class="gt_row gt_left" headers="names_used">Portulaca oleracea</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="species_gbif">Senna obtusifolia</td>
-<td class="gt_row gt_right" headers="publication_count">2</td>
-<td class="gt_row gt_left" headers="names_used">Senna obtusifolia</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="species_gbif">Solanum nigrum</td>
@@ -5325,19 +5315,19 @@ height: 0px !important;
 <td class="gt_row gt_left" headers="names_used">Cynodon dactylon</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_left" headers="species_gbif">Cyperus</td>
-<td class="gt_row gt_right" headers="publication_count">1</td>
-<td class="gt_row gt_left" headers="names_used">Cyperus spp.</td>
-</tr>
-<tr class="even">
 <td class="gt_row gt_left" headers="species_gbif">Cyperus cyperoides</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Mariscus alternifolius</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td class="gt_row gt_left" headers="species_gbif">Cyperus esculentus</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Cyperus esculentus</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="species_gbif">Cyperus iria</td>
+<td class="gt_row gt_right" headers="publication_count">1</td>
+<td class="gt_row gt_left" headers="names_used">Cyperus iria</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="species_gbif">Cytisus scoparius</td>
@@ -5345,24 +5335,14 @@ height: 0px !important;
 <td class="gt_row gt_left" headers="names_used">Cytisus scoparius</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_left" headers="species_gbif">Digera muricata</td>
-<td class="gt_row gt_right" headers="publication_count">1</td>
-<td class="gt_row gt_left" headers="names_used">Digera arvensis</td>
-</tr>
-<tr class="even">
 <td class="gt_row gt_left" headers="species_gbif">Digitaria insularis</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Digitaria insularis</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td class="gt_row gt_left" headers="species_gbif">Echinochloa glabrescens</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Echinochloa glabrescens</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="species_gbif">Echinochloa oryzoides</td>
-<td class="gt_row gt_right" headers="publication_count">1</td>
-<td class="gt_row gt_left" headers="names_used">Echinochloa crus-galli ssp. hispidula</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="species_gbif">Elaeagnus angustifolia</td>
@@ -5460,39 +5440,29 @@ height: 0px !important;
 <td class="gt_row gt_left" headers="names_used">Lactuca sativa</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="species_gbif">Laurus nobilis</td>
-<td class="gt_row gt_right" headers="publication_count">1</td>
-<td class="gt_row gt_left" headers="names_used">Laurus nobilis</td>
-</tr>
-<tr class="odd">
 <td class="gt_row gt_left" headers="species_gbif">Lepidium sativum</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Lepidium sativum</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td class="gt_row gt_left" headers="species_gbif">Ligustrum vulgare</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Ligustrum vulgare</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td class="gt_row gt_left" headers="species_gbif">Lipandra polysperma</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Chenopodium polyspermum</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td class="gt_row gt_left" headers="species_gbif">Lotus corniculatus</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Lotus corniculatus</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td class="gt_row gt_left" headers="species_gbif">Lupinus polyphyllus</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Lupinus polyphyllus</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="species_gbif">Medicago sativa</td>
-<td class="gt_row gt_right" headers="publication_count">1</td>
-<td class="gt_row gt_left" headers="names_used">Medicago sativa</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="species_gbif">Melilotus albus</td>
@@ -5555,94 +5525,104 @@ height: 0px !important;
 <td class="gt_row gt_left" headers="names_used">Oryza rufipogon</td>
 </tr>
 <tr class="odd">
+<td class="gt_row gt_left" headers="species_gbif">Oryza sativa</td>
+<td class="gt_row gt_right" headers="publication_count">1</td>
+<td class="gt_row gt_left" headers="names_used">Oryza sativa</td>
+</tr>
+<tr class="even">
 <td class="gt_row gt_left" headers="species_gbif">Panicum miliaceum</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Panicum miliaceum</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td class="gt_row gt_left" headers="species_gbif">Phalaris arundinacea</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Phalaris arundinacea</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td class="gt_row gt_left" headers="species_gbif">Phleum pratense</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Phleum pratense</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td class="gt_row gt_left" headers="species_gbif">Phragmites australis</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Phragmites australis</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td class="gt_row gt_left" headers="species_gbif">Polygonum aviculare</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Polygonum aviculare</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td class="gt_row gt_left" headers="species_gbif">Pontederia vaginalis</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Monochoria vaginalis</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td class="gt_row gt_left" headers="species_gbif">Potentilla recta</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Potentilla recta</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td class="gt_row gt_left" headers="species_gbif">Praxelis clematidea</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Praxelis clematidea</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td class="gt_row gt_left" headers="species_gbif">Prunus laurocerasus</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Prunus laurocerasus</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td class="gt_row gt_left" headers="species_gbif">Pteridium aquilinum</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Pteridium aquilinum</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td class="gt_row gt_left" headers="species_gbif">Rosa multiflora</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Rosa multiflora</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td class="gt_row gt_left" headers="species_gbif">Rumex conglomeratus</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Rumex conglomeratus</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td class="gt_row gt_left" headers="species_gbif">Rumex crispus</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Rumex crispus</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td class="gt_row gt_left" headers="species_gbif">Rumex obtusifolius</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Rumex obtusifolius</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td class="gt_row gt_left" headers="species_gbif">Saccharum ravennae</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Saccharum ravennae</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td class="gt_row gt_left" headers="species_gbif">Saccharum spontaneum</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Saccharum spontaneum</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td class="gt_row gt_left" headers="species_gbif">Salsola tragus</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Salsola tragus</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td class="gt_row gt_left" headers="species_gbif">Senecio vulgaris</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Senecio vulgaris</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="species_gbif">Senna obtusifolia</td>
+<td class="gt_row gt_right" headers="publication_count">1</td>
+<td class="gt_row gt_left" headers="names_used">Senna obtusifolia</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="species_gbif">Setaria glauca</td>
@@ -5735,26 +5715,21 @@ height: 0px !important;
 <td class="gt_row gt_left" headers="names_used">Urochloa platyphylla</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_left" headers="species_gbif">Urochloa reptans</td>
-<td class="gt_row gt_right" headers="publication_count">1</td>
-<td class="gt_row gt_left" headers="names_used">Brachiaria reptans</td>
-</tr>
-<tr class="even">
 <td class="gt_row gt_left" headers="species_gbif">Ventenata dubia</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Ventenata dubia</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td class="gt_row gt_left" headers="species_gbif">Vernicia fordii</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Aleurites fordii</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td class="gt_row gt_left" headers="species_gbif">Vicia sativa</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Vicia sativa</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td class="gt_row gt_left" headers="species_gbif">Xanthium strumarium</td>
 <td class="gt_row gt_right" headers="publication_count">1</td>
 <td class="gt_row gt_left" headers="names_used">Xanthium strumarium</td>
@@ -6284,7 +6259,7 @@ Weber, J., Dane Panetta, F., Virtue, J. and Pheloung, P. (2009). An analysis of 
 <span id="cb15-34"><a href="#cb15-34" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-35"><a href="#cb15-35" aria-hidden="true" tabindex="-1"></a>required_packages <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
 <span id="cb15-36"><a href="#cb15-36" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;tidyverse&quot;</span>,<span class="st">&quot;readxl&quot;</span>,<span class="st">&quot;janitor&quot;</span>,<span class="st">&quot;httr&quot;</span>,<span class="st">&quot;jsonlite&quot;</span>,</span>
-<span id="cb15-37"><a href="#cb15-37" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;progress&quot;</span>,<span class="st">&quot;tictoc&quot;</span>,<span class="st">&quot;openai&quot;</span>,<span class="st">&quot;gt&quot;</span>,<span class="st">&quot;knitr&quot;</span></span>
+<span id="cb15-37"><a href="#cb15-37" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;progressr&quot;</span>,<span class="st">&quot;tictoc&quot;</span>,<span class="st">&quot;openai&quot;</span>,<span class="st">&quot;gt&quot;</span>,<span class="st">&quot;knitr&quot;</span></span>
 <span id="cb15-38"><a href="#cb15-38" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb15-39"><a href="#cb15-39" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-40"><a href="#cb15-40" aria-hidden="true" tabindex="-1"></a>installed <span class="ot">&lt;-</span> <span class="fu">rownames</span>(<span class="fu">installed.packages</span>())</span>

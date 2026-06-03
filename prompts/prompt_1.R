@@ -1,5 +1,5 @@
 #---------------------------------------------------------------
-# PROMPT 2 – Minimal version (On-topic + Weed name recovery only)
+# PROMPT 1 – Minimal version (On-topic + Weed name recovery only)
 #---------------------------------------------------------------
 # - Retains strict weed identification rules
 # - Designed for high precision weed-name recovery
